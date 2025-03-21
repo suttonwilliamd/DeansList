@@ -3,67 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dean's List - Curated Digital Wonders</title>
+    <title>Dean's Digital Cabinet - Curated Tech Wonders</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="pixel-border">
-        <h1>🕹️ Dean's List</h1>
-        <p class="subtitle">A curated cabinet of digital curiosities</p>
+    <header class="pixel-header">
+        <div class="header-content">
+            <h1>🕶️ Dean's Digital Cabinet</h1>
+            <div class="patreon-cta">
+                <a href="https://www.patreon.com/saint11" class="patreon-button">
+                    <span class="pixel-text">Support Pixel Artistry</span>
+                    <span class="creator-name">Pedro~</span>
+                </a>
+            </div>
+        </div>
+        <p class="header-subtitle">Curated tech wonders & creative sparks</p>
     </header>
 
-    <main>
+    <main class="content-grid">
         <!-- Presence Widget -->
-        <section class="pixel-border presence-widget">
-            <p class="invitation">
-                <span id="visitor-count">0000</span> curious explorers
-            </p>
-            <button id="presence-button" class="ghost-button">
-                🌌 Acknowledge Transient Presence
+        <section class="presence-widget pixel-box">
+            <div class="counter-display">
+                <span class="counter-number" id="visitor-count">0000</span>
+                <span class="counter-label">curious minds wandered through</span>
+            </div>
+            <button id="presence-button" class="pixel-interactive">
+                🌠 Acknowledge Digital Presence
             </button>
-            <p class="disclaimer">
-                (Cookie-free existential nod - refresh to ripple spacetime again)
-            </p>
         </section>
 
         <!-- Game Development Section -->
-        <section class="category pixel-border">
-            <button class="toggle-btn">🕹️ Game Dev Lore</button>
-            <div class="content">
-                <div class="resource-card">
-                    <h3>Pixel Art Wizardry</h3>
-                    <a href="https://www.patreon.com/saint11" 
-                       class="external-link patreon-glitch">
-                        Pedro's Patreon Sanctum
-                        <span class="link-badge">Support</span>
+        <section class="category-section pixel-box">
+            <button class="section-toggle pixel-interactive">
+                🎮 Game Dev Galaxy
+                <span class="badge">4 Resources</span>
+            </button>
+            <div class="section-content">
+                <article class="resource-card">
+                    <h3>Pixel Art Mastery</h3>
+                    <div class="resource-meta">
+                        <span class="resource-type">Patreon</span>
+                        <span class="resource-rating">★★★★☆</span>
+                    </div>
+                    <a href="https://www.patreon.com/saint11" class="resource-link">
+                        Saint11's Pixel Sanctuary
+                        <span class="external-indicator">⤴</span>
                     </a>
-                    <p class="annotation">
-                        Where GIFs dance in 256-color glory
+                    <p class="resource-comment">
+                        "Where I learned sprite animation isn't just moving pictures - it's witchcraft"
                     </p>
-                </div>
-                
-                <div class="resource-card">
-                    <h3>Tomes of Wisdom</h3>
-                    <a href="[AMAZON_LINK]" 
-                       class="external-link book-pulse">
-                        Foundation Game Design
-                        <span class="link-badge">Book</span>
+                </article>
+
+                <article class="resource-card">
+                    <h3>Game Dev Foundation</h3>
+                    <div class="resource-meta">
+                        <span class="resource-type">Book</span>
+                        <span class="resource-rating">★★★★★</span>
+                    </div>
+                    <a href="[AMAZON_LINK]" class="resource-link">
+                        HTML5 Game Design Essentials
+                        <span class="external-indicator">⤴</span>
                     </a>
-                    <p class="annotation">
-                        The spark that ignited this digital campfire
+                    <p class="resource-comment">
+                        "The book that made me realize collision detection is basically digital philosophy"
                     </p>
-                </div>
+                    <div class="support-options">
+                        <a href="[AUTHOR_SITE]" class="support-link">
+                            📘 Author's Website
+                        </a>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Add other sections following same structure -->
+        <!-- Add AI Section -->
+        <section class="category-section pixel-box">
+            <button class="section-toggle pixel-interactive">
+                🤖 AI Observatory
+                <span class="badge">Coming Soon</span>
+            </button>
+            <div class="section-content">
+                <!-- AI content here -->
+            </div>
+        </section>
+
+        <!-- Additional sections... -->
 
     </main>
 
-    <footer class="pixel-border">
-        <p>🚨 All content belongs to original creators</p>
-        <p>🌐 Hosted on <a href="https://github.com/suttonwilliamd/DeansList">GitHub</a></p>
+    <footer class="pixel-footer">
+        <div class="footer-grid">
+            <div class="disclaimer">
+                <p>⚠ All magic belongs to original wizards</p>
+                <p>🛡️ No tracking - Presence is ephemeral</p>
+            </div>
+            <div class="github-cta">
+                <a href="[YOUR_GITHUB]" class="github-link">
+                    <img src="github-mark-white.png" alt="GitHub Octocat">
+                    Improve this digital garden
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
