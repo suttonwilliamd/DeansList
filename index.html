@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dean's Digital Cabinet - Curated Tech Wonders</title>
+    <title>Dean's List - Curated Tech Wonders</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="pixel-header">
         <div class="header-content">
-            <h1>🕶️ Dean's Digital Cabinet</h1>
-            <div class="patreon-cta">
-                <a href="https://www.patreon.com/saint11" class="patreon-button">
-                    <span class="pixel-text">Support Pixel Artistry</span>
-                    <span class="creator-name">Pedro~</span>
+            <h1>🔭 Dean's List</h1>
+            <nav class="creator-links">
+                <a href="[YOUR_PATREON]" class="creator-patron">
+                    Support My Curation
+                    <span class="pixel-arrow">➔</span>
                 </a>
-            </div>
+            </nav>
         </div>
         <p class="header-subtitle">Curated tech wonders & creative sparks</p>
     </header>
@@ -26,18 +26,88 @@
         <section class="presence-widget pixel-box">
             <div class="counter-display">
                 <span class="counter-number" id="visitor-count">0000</span>
-                <span class="counter-label">curious minds wandered through</span>
+                <span class="counter-label">curious explorers passed through</span>
             </div>
             <button id="presence-button" class="pixel-interactive">
-                🌠 Acknowledge Digital Presence
+                🌌 Leave Digital Footprint
             </button>
         </section>
 
-        <!-- Game Development Section -->
+        <!-- Opinion Pieces -->
+        <section class="category-section pixel-box">
+            <button class="section-toggle pixel-interactive">
+                🎭 Cultural Analysis
+                <span class="badge">3 Resources</span>
+            </button>
+            <div class="section-content">
+                <article class="resource-card">
+                    <h3>Hbomberguy</h3>
+                    <div class="resource-meta">
+                        <span class="resource-type">YouTube Essays</span>
+                        <span class="resource-rating">★★★★★</span>
+                    </div>
+                    <a href="https://www.youtube.com/@hbomberguy" class="resource-link">
+                        Internet Culture Deep Dives
+                        <span class="external-indicator">⤴</span>
+                    </a>
+                    <p class="resource-comment">
+                        "Where I learned video essays can weaponize humor for social commentary"
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Software Development -->
+        <section class="category-section pixel-box">
+            <button class="section-toggle pixel-interactive">
+                👨💻 Dev Wisdom
+                <span class="badge">7 Resources</span>
+            </button>
+            <div class="section-content">
+                <article class="resource-card">
+                    <h3>T3 Stack</h3>
+                    <div class="resource-meta">
+                        <span class="resource-type">YouTube</span>
+                        <span class="resource-rating">★★★★☆</span>
+                    </div>
+                    <a href="https://www.youtube.com/@t3dotgg" class="resource-link">
+                        Modern Web Tooling
+                        <span class="external-indicator">⤴</span>
+                    </a>
+                    <p class="resource-comment">
+                        "Theo's framework critiques helped me navigate JavaScript fatigue"
+                    </p>
+                    <div class="support-options">
+                        <a href="https://github.com/t3-oss" class="support-link">
+                            🛠️ Official GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <article class="resource-card">
+                    <h3>Vim & System Design</h3>
+                    <div class="resource-meta">
+                        <span class="resource-type">Twitch/YouTube</span>
+                        <span class="resource-rating">★★★★★</span>
+                    </div>
+                    <a href="https://www.youtube.com/@ThePrimeagen" class="resource-link">
+                        ThePrimeagen's Tech Vault
+                        <span class="external-indicator">⤴</span>
+                    </a>
+                    <p class="resource-comment">
+                        "Where I learned Vim can be both terrifying and exhilarating"
+                    </p>
+                </article>
+
+                <!-- Add similar blocks for other software dev resources -->
+            </div>
+        </section>
+
+        <!-- Game Development -->
         <section class="category-section pixel-box">
             <button class="section-toggle pixel-interactive">
                 🎮 Game Dev Galaxy
-                <span class="badge">4 Resources</span>
+                <span class="badge">5 Resources</span>
             </button>
             <div class="section-content">
                 <article class="resource-card">
@@ -47,7 +117,7 @@
                         <span class="resource-rating">★★★★☆</span>
                     </div>
                     <a href="https://www.patreon.com/saint11" class="resource-link">
-                        Saint11's Pixel Sanctuary
+                        Pedro~'s Pixel Sanctuary
                         <span class="external-indicator">⤴</span>
                     </a>
                     <p class="resource-comment">
@@ -56,40 +126,51 @@
                 </article>
 
                 <article class="resource-card">
-                    <h3>Game Dev Foundation</h3>
+                    <h3>HTML5 Game Design</h3>
+                    <div class="resource-meta">
+                        <span class="resource-type">Book</span>
+                        <span class="resource-rating">★★★★★</span>
+                    </div>
+                    <a href="[AMAZON_LINK]" class="resource-link book-pulse">
+                        Foundation Game Design
+                        <span class="external-indicator">⤴</span>
+                    </a>
+                    <p class="resource-comment">
+                        "The spark that lit my game dev curiosity"
+                    </p>
+                </article>
+
+                <!-- Add other game dev resources -->
+            </div>
+        </section>
+
+        <!-- Cryptocurrency -->
+        <section class="category-section pixel-box crypto-section">
+            <button class="section-toggle pixel-interactive">
+                ₿ Crypto Cosmos
+                <span class="badge">6 Resources</span>
+            </button>
+            <div class="section-content">
+                <article class="resource-card">
+                    <h3>Bitcoin Philosophy</h3>
                     <div class="resource-meta">
                         <span class="resource-type">Book</span>
                         <span class="resource-rating">★★★★★</span>
                     </div>
                     <a href="[AMAZON_LINK]" class="resource-link">
-                        HTML5 Game Design Essentials
+                        The Bitcoin Standard
                         <span class="external-indicator">⤴</span>
                     </a>
                     <p class="resource-comment">
-                        "The book that made me realize collision detection is basically digital philosophy"
+                        "Changed how I think about money and decentralization"
                     </p>
-                    <div class="support-options">
-                        <a href="[AUTHOR_SITE]" class="support-link">
-                            📘 Author's Website
-                        </a>
-                    </div>
                 </article>
+
+                <!-- Add other crypto resources -->
             </div>
         </section>
 
-        <!-- Add AI Section -->
-        <section class="category-section pixel-box">
-            <button class="section-toggle pixel-interactive">
-                🤖 AI Observatory
-                <span class="badge">Coming Soon</span>
-            </button>
-            <div class="section-content">
-                <!-- AI content here -->
-            </div>
-        </section>
-
-        <!-- Additional sections... -->
-
+        <!-- Additional Sections -->
     </main>
 
     <footer class="pixel-footer">
@@ -106,6 +187,10 @@
             </div>
         </div>
     </footer>
+
+    <div class="theme-switcher" onclick="toggleTheme()">
+        <span id="theme-icon">🌓</span>
+    </div>
 
     <script src="script.js"></script>
 </body>
