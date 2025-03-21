@@ -1,13 +1,182 @@
 {
   "sections": [
     {
-      "title": "🎮 Game Dev Galaxy",
+      "id": "opinion-pieces",
+      "title": "Opinion Pieces",
       "resources": [
+        {
+          "title": "Hbomberguy",
+          "type": "YouTube Essays",
+          "rating": 5,
+          "url": "https://www.youtube.com/@hbomberguy",
+          "description": "Internet Culture Deep Dives",
+          "comment": "Where I learned video essays can weaponize humor for social commentary."
+        }
+      ]
+    },
+    {
+      "id": "software",
+      "title": "Software",
+      "resources": [
+        {
+          "title": "t3dotgg (Theo)",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/@t3dotgg",
+          "description": "Full Stack TypeScript Development",
+          "comment": "Known for tutorials on TypeScript and tools like t3 stack."
+        },
+        {
+          "title": "ThePrimeagen",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/c/theprimeagen",
+          "description": "Programming with Rust, Vim, and TypeScript",
+          "comment": "Software engineer sharing insights on programming and tools."
+        },
+        {
+          "title": "Funfunfunction (MPJ)",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/c/funfunfunction",
+          "description": "JavaScript and Functional Programming",
+          "comment": "Engaging tutorials on JavaScript and web development."
+        },
+        {
+          "title": "Methmethmethod",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/c/MethMethMethod",
+          "description": "Coding Concepts and Web Development",
+          "comment": "Explains coding concepts and JavaScript in an engaging way."
+        },
+        {
+          "title": "TheCodingTrain (Daniel Shiffman)",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/c/TheCodingTrain",
+          "description": "Creative Coding with JavaScript and p5.js",
+          "comment": "Perfect for beginners, teaching creative coding."
+        },
+        {
+          "title": "Austin Griffith",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/channel/UC_HI2i2peo1A-STdG22GFsA",
+          "description": "Ethereum Development and Web3",
+          "comment": "Helps developers build on web3 with Scaffold-Eth."
+        }
+      ]
+    },
+    {
+      "id": "crypto",
+      "title": "Crypto",
+      "resources": [
+        {
+          "title": "What is Bitcoin?",
+          "type": "Official Website",
+          "rating": 5,
+          "url": "https://bitcoin.org/en/how-it-works",
+          "description": "Bitcoin How It Works",
+          "comment": "Official guide to Bitcoin and its technology."
+        },
+        {
+          "title": "What is Ethereum?",
+          "type": "Official Website",
+          "rating": 5,
+          "url": "https://ethereum.org/en/what-is-ethereum/",
+          "description": "Ethereum What Is",
+          "comment": "Intro to Ethereum and decentralized tech."
+        },
+        {
+          "title": "SHIB",
+          "type": "Official Website",
+          "rating": 5,
+          "url": "https://shibatoken.com/",
+          "description": "Shiba Token Website",
+          "comment": "Shiba Inu coin and its ecosystem."
+        },
+        {
+          "title": "Vitalik Buterin",
+          "type": "Personal Website",
+          "rating": 5,
+          "url": "https://vitalik.ca/",
+          "description": "Vitalik Buterin Website",
+          "comment": "Ethereum co-founder's insights on blockchain."
+        }
+      ]
+    },
+    {
+      "id": "programming",
+      "title": "Programming",
+      "resources": [
+        {
+          "title": "ChiliTomatoNoodle",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/channel/UCsyHonfwHi4fLb2lkq0DEAA",
+          "description": "C++ and Game Development Tutorials",
+          "comment": "C++ and DirectX tutorials for game dev."
+        },
+        {
+          "title": "ThinMatrix",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/user/ThinMatrix",
+          "description": "Indie Game Dev and OpenGL",
+          "comment": "Devlogs and OpenGL game engine tutorials."
+        },
+        {
+          "title": "DerekBanas",
+          "type": "YouTube Channel",
+          "rating": 5,
+          "url": "https://www.youtube.com/user/derekbanas",
+          "description": "Comprehensive Programming Tutorials",
+          "comment": "Tutorials on various programming languages."
+        }
+      ]
+    },
+    {
+      "id": "game-dev",
+      "title": "Game Dev",
+      "resources": [
+        {
+          "title": "Foundation Game Design with HTML5 and JavaScript",
+          "type": "Book",
+          "rating": 5,
+          "url": "https://www.amazon.com/Foundation-Game-Design-HTML5-JavaScript/dp/1430247169",
+          "description": "Amazon Book Page",
+          "comment": "Guide to 2D game design with HTML5 and JS."
+        },
         {
           "title": "Pixel Art Mastery",
           "type": "Patreon",
+          "rating": 5,
           "url": "https://www.patreon.com/saint11",
-          "description": "Pedro~'s sprite animation techniques"
+          "description": "Pixel Art Tutorials",
+          "comment": "Pedro~'s sprite animation techniques"
+        }
+      ]
+    },
+    {
+      "id": "topics",
+      "title": "Topics",
+      "resources": [
+        {
+          "title": "Creepypasta",
+          "type": "YouTube Search",
+          "rating": 5,
+          "url": "https://www.youtube.com/results?search_query=creepypasta",
+          "description": "Creepypasta YouTube Search",
+          "comment": "Horror fiction videos from internet culture."
+        },
+        {
+          "title": "True Crime",
+          "type": "YouTube Search",
+          "rating": 5,
+          "url": "https://www.youtube.com/results?search_query=true+crime",
+          "description": "True Crime YouTube Search",
+          "comment": "Documentaries on real-life criminal cases."
         }
       ]
     }
