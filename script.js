@@ -1,15 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Collapsible Sections
+  // Collapsible Sections Initialization
+  document.querySelectorAll('.category-section').forEach(section => {
+    const toggle = section.querySelector('.section-toggle');
+    const content = toggle.nextElementSibling;
+    const savedState = localStorage.getItem(`section-${section.id}-open`);
+    
+    content.style.transition = 'max-height 0.3s ease-out';
+    content.style.overflow = 'hidden';
+    
+    if (savedState !== null) {
+      content.style.maxHeight = savedState;
+      if (savedState !== '0px') toggle.classList.add('active');
+    } else {
+      content.style.maxHeight = '0px';
+    }
+  });
+
+  // Collapsible Toggle Handler
   document.querySelectorAll('.section-toggle').forEach(toggle => {
     toggle.addEventListener('click', () => {
       const content = toggle.nextElementSibling;
-      content.style.maxHeight = 
-        content.style.maxHeight ? null : `${content.scrollHeight}px`;
-      toggle.classList.toggle('active');
+      const isCollapsed = content.style.maxHeight === '0px';
       
-      // Save state
-      const section = toggle.closest('.category-section');
-      localStorage.setItem(`section-${section.id}-open`, content.style.maxHeight);
+      content.style.maxHeight = isCollapsed 
+        ? `${content.scrollHeight}px` 
+        : '0px';
+        
+      toggle.classList.toggle('active', isCollapsed);
+      toggle.setAttribute('aria-expanded', isCollapsed);
+      localStorage.setItem(`section-${toggle.closest('.category-section').id}-open`, content.style.maxHeight);
     });
   });
 
@@ -53,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="http"]').forEach(link => {
     if (!link.href.includes(window.location.host)) {
       link.target = '_blank';
-      link.rel = 'noopener';
+      link.rel = 'noopener noreferrer';
     }
   });
 
