@@ -1,65 +1,64 @@
-// Collapsible Sections
-document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        content.style.maxHeight = 
-            content.style.maxHeight ? null : `${content.scrollHeight}px`;
-        btn.classList.toggle('active');
-        
-        // Pixel sound effect simulation
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        const oscillator = audioContext.createOscillator();
-        oscillator.type = 'square';
-        oscillator.frequency.setValueAtTime(
-            content.style.maxHeight ? 440 : 220, 
-            audioContext.currentTime
-        );
-        
-        const gainNode = audioContext.createGain();
-        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+document.addEventListener('DOMContentLoaded', () => {
+    // Section Toggles
+    document.querySelectorAll('.section-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            const content = toggle.nextElementSibling;
+            content.style.maxHeight = 
+                content.style.maxHeight ? null : `${content.scrollHeight}px`;
+            
+            // Play modulation effect
+            const freq = content.style.maxHeight ? 523.25 : 261.63;
+            playModulation(freq);
+        });
+    });
 
-        oscillator.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-        oscillator.start();
-        oscillator.stop(audioContext.currentTime + 0.1);
+    // Presence System
+    const presenceButton = document.getElementById('presence-button');
+    const updateCounter = async () => {
+        try {
+            const response = await fetch('https://api.countapi.xyz/hit/deans-list/visits');
+            const data = await response.json();
+            document.getElementById('visitor-count').textContent = 
+                String(data.value).padStart(4, '0');
+            
+            presenceButton.textContent = '🌀 Presence Quantized';
+            setTimeout(() => {
+                presenceButton.textContent = '🌠 Acknowledge Digital Presence';
+            }, 2000);
+            
+        } catch (error) {
+            presenceButton.textContent = '🌌 Quantum Interference Detected';
+        }
+    };
+    presenceButton.addEventListener('click', updateCounter);
+
+    // External Link Handler
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (!link.href.includes(window.location.host)) {
+                e.preventDefault();
+                const leave = confirm(`Venturing to ${new URL(link.href).hostname}\n\nRemember to support the creator!`);
+                if (leave) window.open(link.href, '_blank');
+            }
+        });
     });
 });
 
-// Presence System
-const presenceButton = document.getElementById('presence-button');
-const visitorCount = document.getElementById('visitor-count');
+// Chiptune Sound Effects
+function playModulation(frequency) {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.type = 'square';
+    oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+    
+    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.3);
 
-const updateCounter = async () => {
-    try {
-        const response = await fetch('https://api.countapi.xyz/hit/deans-list/visits');
-        const data = await response.json();
-        
-        visitorCount.textContent = String(data.value).padStart(4, '0');
-        visitorCount.style.animation = 'none';
-        void visitorCount.offsetWidth; // Trigger reflow
-        visitorCount.style.animation = 'countPop 0.5s ease';
-        
-        presenceButton.textContent = '🌌 Presence Acknowledged';
-        setTimeout(() => {
-            presenceButton.textContent = '🌌 Acknowledge Transient Presence';
-        }, 2000);
-        
-    } catch (error) {
-        console.log('Counter currently in flux - your quantum state is noted');
-        presenceButton.textContent = '🪐 Cosmic Interference Detected';
-    }
-};
-
-presenceButton.addEventListener('click', updateCounter);
-
-// Initial count fetch
-(async () => {
-    try {
-        const response = await fetch('https://api.countapi.xyz/get/deans-list/visits');
-        const data = await response.json();
-        visitorCount.textContent = String(data.value).padStart(4, '0');
-    } catch (error) {
-        visitorCount.textContent = '????';
-    }
-})();
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 0.3);
+}
