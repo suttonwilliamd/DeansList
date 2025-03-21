@@ -59,9 +59,7 @@
                 </article>
             </div>
         </section>
-
-        <!-- Additional sections omitted for brevity -->
-
+        <!-- Additional sections can be added here -->
     </main>
 
     <!-- Footer -->
@@ -75,7 +73,7 @@
 
             <!-- GitHub CTA -->
             <div class="github-cta">
-                <a href="[YOUR_GITHUB]" target="_blank" rel="noopener noreferrer" aria-label="Improve this digital garden on GitHub" class="github-link">
+                <a href="https://github.com/suttonwilliamd/DeansList" target="_blank" rel="noopener noreferrer" aria-label="Improve this digital garden on GitHub" class="github-link">
                     Improve this digital garden
                 </a>
             </div>
@@ -89,34 +87,5 @@
 
     <!-- Scripts -->
     <script src="./script.js"></script>
-
-    <!-- Visitor Counter Logic -->
-    <script>
-        document.getElementById('presence-button').addEventListener('click', async () => {
-            try {
-                await fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/dispatches', {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/vnd.github.everest-preview+json',
-                        'Authorization': 'Bearer YOUR_PERSONAL_ACCESS_TOKEN'
-                    },
-                    body: JSON.stringify({
-                        event_type: 'increment_counter'
-                    })
-                });
-                alert('Your presence has been recorded!');
-            } catch (error) {
-                console.error('Error updating count:', error);
-                alert('Something went wrong. Please try again later.');
-            }
-        });
-
-        // Fetch and display the current count
-        fetch('https://raw.githubusercontent.com/suttonwilliamd/DeansList/main/counter.json')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('visitor-count').textContent = String(data.count).padStart(4, '0');
-            });
-    </script>
 </body>
 </html>
