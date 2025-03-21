@@ -36,13 +36,20 @@
             </button>
         </section>
 
-        <!-- Opinion Pieces -->
-        <section class="category-section pixel-box" id="opinion-pieces">
-            <button class="section-toggle pixel-interactive" aria-expanded="false" aria-controls="opinion-pieces-content">
-                🎭 Opinion Pieces
-                <span class="badge">1 Resource</span>
-            </button>
-            <div class="section-content" id="opinion-pieces-content">
+        <!-- Category Tags -->
+        <div class="categories-tags">
+            <button class="category-tag" data-category="opinion-pieces">Opinion Pieces</button>
+            <button class="category-tag" data-category="software">Software</button>
+            <button class="category-tag" data-category="crypto">Crypto</button>
+            <button class="category-tag" data-category="programming">Programming</button>
+            <button class="category-tag" data-category="game-dev">Game Dev</button>
+            <button class="category-tag" data-category="topics">Topics</button>
+        </div>
+
+        <!-- Category Content Container -->
+        <div class="category-content-container">
+            <!-- Opinion Pieces -->
+            <div class="category-content" id="opinion-pieces">
                 <article class="resource-card">
                     <h3>Hbomberguy</h3>
                     <div class="resource-meta">
@@ -56,15 +63,9 @@
                     <p class="resource-comment">Where I learned video essays can weaponize humor for social commentary.</p>
                 </article>
             </div>
-        </section>
 
-        <!-- Software -->
-        <section class="category-section pixel-box" id="software">
-            <button class="section-toggle pixel-interactive" aria-expanded="false" aria-controls="software-content">
-                💻 Software
-                <span class="badge">6 Resources</span>
-            </button>
-            <div class="section-content" id="software-content">
+            <!-- Software -->
+            <div class="category-content" id="software">
                 <article class="resource-card">
                     <h3>t3dotgg (Theo)</h3>
                     <div class="resource-meta">
@@ -138,15 +139,9 @@
                     <p class="resource-comment">Helps developers build on web3 with Scaffold-Eth.</p>
                 </article>
             </div>
-        </section>
 
-        <!-- Crypto -->
-        <section class="category-section pixel-box" id="crypto">
-            <button class="section-toggle pixel-interactive" aria-expanded="false" aria-controls="crypto-content">
-                🪙 Crypto
-                <span class="badge">4 Resources</span>
-            </button>
-            <div class="section-content" id="crypto-content">
+            <!-- Crypto -->
+            <div class="category-content" id="crypto">
                 <article class="resource-card">
                     <h3>What is Bitcoin?</h3>
                     <div class="resource-meta">
@@ -196,15 +191,9 @@
                     <p class="resource-comment">Ethereum co-founder’s insights on blockchain.</p>
                 </article>
             </div>
-        </section>
 
-        <!-- Programming -->
-        <section class="category-section pixel-box" id="programming">
-            <button class="section-toggle pixel-interactive" aria-expanded="false" aria-controls="programming-content">
-                👨‍💻 Programming
-                <span class="badge">3 Resources</span>
-            </button>
-            <div class="section-content" id="programming-content">
+            <!-- Programming -->
+            <div class="category-content" id="programming">
                 <article class="resource-card">
                     <h3>ChiliTomatoNoodle</h3>
                     <div class="resource-meta">
@@ -242,15 +231,9 @@
                     <p class="resource-comment">Tutorials on various programming languages.</p>
                 </article>
             </div>
-        </section>
 
-        <!-- Game Dev -->
-        <section class="category-section pixel-box" id="game-dev">
-            <button class="section-toggle pixel-interactive" aria-expanded="false" aria-controls="game-dev-content">
-                🎮 Game Dev
-                <span class="badge">1 Resource</span>
-            </button>
-            <div class="section-content" id="game-dev-content">
+            <!-- Game Dev -->
+            <div class="category-content" id="game-dev">
                 <article class="resource-card">
                     <h3>Foundation Game Design with HTML5 and JavaScript</h3>
                     <div class="resource-meta">
@@ -264,15 +247,9 @@
                     <p class="resource-comment">Guide to 2D game design with HTML5 and JS.</p>
                 </article>
             </div>
-        </section>
 
-        <!-- Topics -->
-        <section class="category-section pixel-box" id="topics">
-            <button class="section-toggle pixel-interactive" aria-expanded="false" aria-controls="topics-content">
-                📚 Topics
-                <span class="badge">2 Resources</span>
-            </button>
-            <div class="section-content" id="topics-content">
+            <!-- Topics -->
+            <div class="category-content" id="topics">
                 <article class="resource-card">
                     <h3>Creepypasta</h3>
                     <div class="resource-meta">
@@ -298,7 +275,7 @@
                     <p class="resource-comment">Documentaries on real-life criminal cases.</p>
                 </article>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="pixel-footer">
@@ -321,4 +298,4 @@
 
     <script src="./script.js"></script>
 </body>
-                                                  </html>
+</html>
