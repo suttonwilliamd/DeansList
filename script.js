@@ -1,38 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Collapsible Sections Initialization
-    document.querySelectorAll('.category-section').forEach(section => {
-        const toggle = section.querySelector('.section-toggle');
-        const content = toggle.nextElementSibling;
-        const savedState = localStorage.getItem(`section-${section.id}-open`);
-        
-        content.style.transition = 'max-height 0.3s ease-out';
-        content.style.overflow = 'hidden';
-        
-        if (savedState !== null) {
-            content.style.maxHeight = savedState;
-            if (savedState !== '0px') toggle.classList.add('active');
-        } else {
-            content.style.maxHeight = '0px';
-        }
-    });
-
-    // Collapsible Toggle Handler
-    document.querySelectorAll('.section-toggle').forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const content = toggle.nextElementSibling;
-            const isCollapsed = content.style.maxHeight === '0px';
-            
-            content.style.maxHeight = isCollapsed 
-                ? `${content.scrollHeight}px` 
-                : '0px';
-                
-            toggle.classList.toggle('active', isCollapsed);
-            toggle.setAttribute('aria-expanded', isCollapsed);
-            localStorage.setItem(`section-${toggle.closest('.category-section').id}-open`, content.style.maxHeight);
-        });
-    });
-
-    // Visitor Counter
+    // **Visitor Counter**
     const presenceButton = document.getElementById('presence-button');
     const updateCounter = async () => {
         try {
@@ -49,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     presenceButton.addEventListener('click', updateCounter);
 
-    // Initialize visitor count
+    // Initialize visitor count on page load
     (async () => {
         try {
             const response = await fetch('https://counterapi.dev/get/deans-list/visits');
@@ -60,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })();
 
-    // Theme Toggler
+    // **Theme Toggler**
     window.toggleTheme = () => {
         const current = document.body.getAttribute('data-theme') || 'dark';
         const newTheme = current === 'dark' ? 'light' : 'dark';
@@ -70,17 +37,65 @@ document.addEventListener('DOMContentLoaded', () => {
             newTheme === 'dark' ? '🌑' : '☀️';
     };
 
-    // Initialize theme
+    // Initialize theme based on saved preference or default to dark
     const savedTheme = localStorage.getItem('siteTheme') || 'dark';
     document.body.setAttribute('data-theme', savedTheme);
     document.getElementById('theme-icon').textContent = 
         savedTheme === 'dark' ? '🌑' : '☀️';
 
-    // External Links
+    // **External Links**
     document.querySelectorAll('a[href^="http"]').forEach(link => {
         if (!link.href.includes(window.location.host)) {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
         }
     });
+
+    // **Category Tags Logic**
+    const categoryTags = document.querySelectorAll('.category-tag');
+    const categoryContents = document.querySelectorAll('.category-content');
+
+    function showCategory(categoryId) {
+        // Remove 'active' class from all tags
+        categoryTags.forEach(tag => tag.classList.remove('active'));
+
+        // Add 'active' class to the clicked tag
+        const selectedTag = document.querySelector(`.category-tag[data-category="${categoryId}"]`);
+        if (selectedTag) selectedTag.classList.add('active');
+
+        // Hide all content sections with a fade-out effect
+        categoryContents.forEach(content => {
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                setTimeout(() => {
+                    content.style.display = 'none';
+                }, 300); // Matches the CSS transition duration of 0.3s
+            } else {
+                content.style.display = 'none';
+            }
+        });
+
+        // Show the selected content with a fade-in effect
+        const selectedContent = document.getElementById(categoryId);
+        if (selectedContent) {
+            selectedContent.style.display = 'block';
+            setTimeout(() => {
+                selectedContent.classList.add('active');
+            }, 10); // Small delay to trigger the CSS transition
+        }
+    }
+
+    // Add click event listeners to all category tags
+    categoryTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+            const categoryId = tag.getAttribute('data-category');
+            showCategory(categoryId);
+        });
+    });
+
+    // Show the first category by default when the page loads
+    if (categoryTags.length > 0) {
+        const firstCategory = categoryTags[0].getAttribute('data-category');
+        showCategory(firstCategory);
+    }
 });
