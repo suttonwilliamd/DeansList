@@ -112,7 +112,7 @@
         });
 
         // Fetch and display the current count
-        fetch('https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/counter.json')
+        fetch('https://raw.githubusercontent.com/suttonwilliamd/DeansList/main/counter.json')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('visitor-count').textContent = String(data.count).padStart(4, '0');
