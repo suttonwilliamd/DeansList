@@ -1,29 +1,113 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // **Load Resources Dynamically from JSON**
+    const loadResources = async () => {
+        try {
+            const response = await fetch('./resources.json');
+            if (response.ok) {
+                const data = await response.json();
+                
+                // Process each section
+                data.sections.forEach(section => {
+                    const sectionElement = document.getElementById(section.id);
+                    if (!sectionElement) return; // Skip if section doesn't exist in DOM
+                    
+                    // Clear existing content
+                    sectionElement.innerHTML = '';
+                    
+                    // Add resources to the section
+                    section.resources.forEach(resource => {
+                        const resourceCard = document.createElement('article');
+                        resourceCard.className = 'resource-card';
+                        
+                        // Create rating stars
+                        const stars = '★'.repeat(resource.rating) + '☆'.repeat(5 - resource.rating);
+                        
+                        resourceCard.innerHTML = `
+                            <h3>${resource.title}</h3>
+                            <div class="resource-meta">
+                                <span class="resource-type">${resource.type}</span>
+                                <span class="resource-rating">${stars}</span>
+                            </div>
+                            <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="resource-link">
+                                ${resource.description}
+                                <span class="external-indicator">⤴</span>
+                            </a>
+                            <p class="resource-comment">${resource.comment}</p>
+                        `;
+                        
+                        sectionElement.appendChild(resourceCard);
+                    });
+                });
+            }
+        } catch (error) {
+            console.error('Error loading resources:', error);
+        }
+    };
+    
+    // Call the function to load resources
+    loadResources();
     // **Visitor Counter**
     const presenceButton = document.getElementById('presence-button');
+    const visitorCountElement = document.getElementById('visitor-count');
+    
+    // Function to update counter display with proper formatting
+    const updateCounterDisplay = (count) => {
+        visitorCountElement.textContent = String(count).padStart(4, '0');
+    };
+    
+    // First try to get count from local counter.json, fallback to counterapi.dev
     const updateCounter = async () => {
         try {
-            const response = await fetch('https://counterapi.dev/hit/deans-list/visits');
-            const data = await response.json();
-            document.getElementById('visitor-count').textContent = String(data.value).padStart(4, '0');
+            // Try local counter.json first
+            const localResponse = await fetch('./counter.json');
+            if (localResponse.ok) {
+                const localData = await localResponse.json();
+                updateCounterDisplay(localData.count);
+                
+                // Trigger GitHub workflow to increment counter
+                // This would require setting up a server endpoint that triggers the workflow
+                // For now, we'll use counterapi as a fallback
+            } else {
+                // Fallback to counterapi.dev
+                const response = await fetch('https://counterapi.dev/hit/deans-list/visits');
+                const data = await response.json();
+                updateCounterDisplay(data.value);
+            }
+            
+            // Update button text to show acknowledgment
             presenceButton.textContent = '🌌 Presence Acknowledged';
             setTimeout(() => {
                 presenceButton.textContent = '🌌 Leave Digital Footprint';
             }, 2000);
         } catch (error) {
+            console.error('Error updating counter:', error);
             presenceButton.textContent = '🌠 Cosmic Interference';
+            setTimeout(() => {
+                presenceButton.textContent = '🌌 Leave Digital Footprint';
+            }, 2000);
         }
     };
+    
+    // Add click event listener to presence button
     presenceButton.addEventListener('click', updateCounter);
 
     // Initialize visitor count on page load
     (async () => {
         try {
-            const response = await fetch('https://counterapi.dev/get/deans-list/visits');
-            const data = await response.json();
-            document.getElementById('visitor-count').textContent = String(data.value).padStart(4, '0');
+            // Try local counter first
+            const localResponse = await fetch('./counter.json');
+            if (localResponse.ok) {
+                const localData = await localResponse.json();
+                updateCounterDisplay(localData.count);
+            } else {
+                // Fallback to counterapi.dev
+                const response = await fetch('https://counterapi.dev/get/deans-list/visits');
+                const data = await response.json();
+                updateCounterDisplay(data.value);
+            }
         } catch (error) {
-            document.getElementById('visitor-count').textContent = '????';
+            console.error('Error fetching initial count:', error);
+            visitorCountElement.textContent = '????';
         }
     })();
 
