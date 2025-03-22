@@ -63,3 +63,19 @@ main {
     margin: 0 10px;
     display: inline-block; /* Ensure buttons are inline */
 }
+
+footer {
+    background-color: #4CAF50; /* Match the support bar */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Allows for positioning of the space below */
+}
+
+.footer-content {
+    margin-bottom: 20px; /* Space above the empty space */
+}
+
+.footer-space {
+    height: 100px; /* Adjust this height as needed for the Ko-Fi widget */
+}
