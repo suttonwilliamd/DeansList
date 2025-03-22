@@ -1,0 +1,30 @@
+{
+  "Opinion Pieces": {
+    "title": "Opinion Pieces",
+    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/Hbomberguy' target='_blank'>Hbomberguy</a> - In-depth video essays critiquing media and culture.</li></ul>"
+  },
+  "Software": {
+    "title": "Software",
+    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/t3dotgg' target='_blank'>t3dotgg Theo</a> - Insights on web development and the T3 stack.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/ThePrimeagen' target='_blank'>ThePrimeagen</a> - Programming tutorials focusing on Vim and TypeScript.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/FunFunFunction' target='_blank'>Funfunfunction MPJ</a> - Engaging JavaScript and functional programming content.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/Methmethmethod' target='_blank'>Methmethmethod</a> - JavaScript and web development tutorials.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/TheCodingTrain' target='_blank'>TheCodingTrain Daniel Shiffman</a> - Creative coding tutorials with p5.js.</li></ul>"
+  },
+  "Dr. Petter's Software": {
+    "title": "Dr. Petter's Software",
+    "content": "<p>Dr. Petter is known for creating tools that enhance game development and sound design. Here are some of his notable contributions:</p><ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/musagi/' target='_blank'>Musagi</a> - A music composition tool for chiptune music.</li><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/sfxr/' target='_blank'>SFXR</a> - A retro-style sound effects generator.</li><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/sfxtreme/' target='_blank'>SFXTreme</a> - An advanced version with more features.</li><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/sculptris/' target='_blank'>Sculptris</a> - A digital sculpting tool for creating 3D models.</li></ul>"
+  },
+  "Crypto": {
+    "title": "Crypto",
+    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=What+is+Bitcoin' target='_blank'>What is Bitcoin?</a> - Overview of Bitcoin.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=What+is+Ethereum' target='_blank'>What is Ethereum?</a> - Introduction to Ethereum and smart contracts.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=SHIB' target='_blank'>SHIB</a> - Information about the Shiba Inu cryptocurrency.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=Vitalik+Buterin' target='_blank'>Vitalik Buterin</a> - Insights from the co-founder of Ethereum.</li></ul>"
+  },
+  "Programming": {
+    "title": "Programming",
+    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/ChiliTomatoNoodle' target='_blank'>ChiliTomatoNoodle</a> - Programming tutorials and insights.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/ThinMatrix' target='_blank'>ThinMatrix</a> - Game development tutorials using Java.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/DerekBanas' target='_blank'>DerekBanas</a> - Comprehensive programming tutorials.</li></ul>"
+  },
+  "Game Dev": {
+    "title": "Game Dev",
+    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=Foundation+Game+Design+with+HTML5+and+JavaScript+Rex+van_der_Spuy' target='_blank'>Foundation Game Design with HTML5 and JavaScript</a> - Course by Rex van der Spuy.</li></ul>"
+  },
+  "Topics": {
+    "title": "Topics",
+    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=Creepypasta' target='_blank'>Creepypasta</a> - Explore creepypasta stories.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=True+Crime' target='_blank'>True Crime</a> - Delve into true crime documentaries.</li></ul>"
+  }
+}
