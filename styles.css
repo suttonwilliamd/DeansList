@@ -34,22 +34,16 @@ main {
     background-color: #f1f1f1;
     padding: 10px;
     border: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.category-title:hover {
+    background-color: #e0e0e0;
 }
 
 .category-content {
-    display: none;
+    display: none; /* Initially hide the content */
     padding: 10px;
     border: 1px solid #ccc;
     border-top: none;
-}
-
-@media (max-width: 600px) {
-    .support-bar a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .category-title {
-        font-size: 1.2em;
-    }
 }
