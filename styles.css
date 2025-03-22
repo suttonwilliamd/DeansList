@@ -2,16 +2,22 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50; /* Green background for the header */
+    background-color: #2c3e50; /* Dark blue-gray */
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 /* Support Bar Styles */
@@ -19,83 +25,116 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .support-bar span {
-    margin-right: 10px;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #ecf0f1;
 }
 
 .support-bar a {
-    margin: 0 10px;
-    display: inline-block; /* Ensure buttons are inline */
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.support-bar a:hover {
+    transform: scale(1.1);
 }
 
 .support-bar img {
-    width: 120px; /* Set a consistent width for the images */
-    height: auto; /* Maintain aspect ratio */
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.support-bar img:hover {
+    opacity: 0.8;
 }
 
 /* Main Content Styles */
 main {
-    flex: 1; /* Allow the main content to grow and take available space */
-    padding: 20px;
+    flex: 1;
+    padding: 30px;
 }
 
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Category Styles */
 .category {
-    margin: 15px 0;
+    margin: 25px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.category:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .category-title {
     cursor: pointer;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    transition: background-color 0.3s;
+    background-color: #3498db; /* Blue */
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
 
 .category-title:hover {
-    background-color: #e0e0e0;
+    background-color: #2980b9;
 }
 
 .category-content {
-    display: none; /* Initially hide the content */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-top: none;
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #eee;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #4CAF50; /* Match the support bar */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+.category-content ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.footer-content {
-    margin-bottom: 20px; /* Space above the empty space */
-}
-
-.footer-space {
-    height: 100px; /* Adjust this height as needed for the Ko-Fi widget */
+.category-content li {
+    margin-bottom: 12px;
 }
 
 /* Link Styles */
 a {
-    color: #00b9fe !important; /* Change link color to a visible blue and use !important to override */
-    text-decoration: none; /* Remove underline from links */
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline; /* Underline links on hover */
-    color: #ffcc00 !important; /* Change color on hover for better visibility */
+    text-decoration: underline;
+    color: #2980b9;
 }
 
-/* Specificity for Category Links */
-.category-content a {
-    color: #00b9fe !important; /* Ensure links in category content are visible */
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.category-content a:hover {
-    color: #ffcc00 !important; /* Ensure hover color is applied */
+.footer-content {
+    margin-bottom: 15px;
+}
+
+.footer-space {
+    height: 80px;
 }
