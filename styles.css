@@ -12,7 +12,6 @@ header {
     background-color: #4CAF50; /* Green background for the header */
     color: white;
     padding: 10px 0;
-    text-align: center;
 }
 
 /* Support Bar Styles */
@@ -83,10 +82,11 @@ footer {
 
 /* Link Styles */
 a {
-    color: white; /* Default link color */
+    color: #00b9fe; /* Change link color to a visible blue */
     text-decoration: none; /* Remove underline from links */
 }
 
 a:hover {
     text-decoration: underline; /* Underline links on hover */
+    color: #ffcc00; /* Change color on hover for better visibility */
 }
