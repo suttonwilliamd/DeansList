@@ -82,11 +82,20 @@ footer {
 
 /* Link Styles */
 a {
-    color: #00b9fe; /* Change link color to a visible blue */
+    color: #00b9fe !important; /* Change link color to a visible blue and use !important to override */
     text-decoration: none; /* Remove underline from links */
 }
 
 a:hover {
     text-decoration: underline; /* Underline links on hover */
-    color: #ffcc00; /* Change color on hover for better visibility */
+    color: #ffcc00 !important; /* Change color on hover for better visibility */
+}
+
+/* Specificity for Category Links */
+.category-content a {
+    color: #00b9fe !important; /* Ensure links in category content are visible */
+}
+
+.category-content a:hover {
+    color: #ffcc00 !important; /* Ensure hover color is applied */
 }
