@@ -68,46 +68,39 @@ h1 {
     color: #2c3e50;
 }
 
-/* Category Styles */
-.category {
-    margin: 25px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-    background-color: #fff;
-    transition: box-shadow 0.3s ease;
+/* Interests Container */
+.interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
-.category:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.category-title {
-    cursor: pointer;
+/* Interest Bubble Styles */
+.interest-bubble {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 8px;
     background-color: #3498db; /* Blue */
     color: white;
-    padding: 15px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.category-title:hover {
+.interest-bubble:hover {
     background-color: #2980b9;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.category-content {
-    display: none;
+/* Content Area Styles */
+#content-area {
     padding: 20px;
     border-top: 1px solid #eee;
-}
-
-.category-content ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.category-content li {
-    margin-bottom: 12px;
+    margin-top: 20px;
 }
 
 /* Link Styles */
@@ -137,4 +130,14 @@ footer {
 
 .footer-space {
     height: 80px;
+}
+
+/* Category Content Specificity - Ensure links within loaded content are styled */
+#content-area a {
+    color: #3498db;
+}
+
+#content-area a:hover {
+    color: #2980b9;
+    text-decoration: underline;
 }
