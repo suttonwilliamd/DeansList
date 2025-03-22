@@ -1,27 +1,44 @@
+/* General Styles */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background for the header */
     color: white;
     padding: 10px 0;
     text-align: center;
 }
 
+/* Support Bar Styles */
+.support-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.support-bar span {
+    margin-right: 10px;
+}
+
 .support-bar a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block; /* Ensure buttons are inline */
 }
 
-.support-bar a:hover {
-    text-decoration: underline;
+.support-bar img {
+    width: 120px; /* Set a consistent width for the images */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Main Content Styles */
 main {
+    flex: 1; /* Allow the main content to grow and take available space */
     padding: 20px;
 }
 
@@ -48,28 +65,12 @@ main {
     border-top: none;
 }
 
-.support-bar {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-.support-bar span {
-    margin-right: 10px;
-}
-
-.support-bar a {
-    margin: 0 10px;
-    display: inline-block; /* Ensure buttons are inline */
-}
-
+/* Footer Styles */
 footer {
     background-color: #4CAF50; /* Match the support bar */
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: relative; /* Allows for positioning of the space below */
 }
 
 .footer-content {
@@ -78,4 +79,14 @@ footer {
 
 .footer-space {
     height: 100px; /* Adjust this height as needed for the Ko-Fi widget */
+}
+
+/* Link Styles */
+a {
+    color: white; /* Default link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
 }
