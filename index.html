@@ -3,102 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dean's List - Curated tech wonders and creative sparks for developers and tech enthusiasts">
-    <meta name="keywords" content="technology, game development, software development, crypto, programming resources">
-    <meta name="author" content="William Sutton">
-    <title>Dean's List - Curated Tech Wonders</title>
+    <title>Dean's List</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="pixel-header">
-        <div class="header-content">
-            <h1>🔭 Dean's List</h1>
-            <nav class="creator-links">
-                <a href="https://patreon.com/yourpatreon" class="creator-patron" aria-label="Support my curation on Patreon">
-                    Support My Curation
-                    <span class="pixel-arrow" aria-hidden="true">➔</span>
-                </a>
-            </nav>
+    <header>
+        <div class="support-bar">
+            <a href="https://www.amazon.com" target="_blank">Support Me While You Shop</a>
+            <a href="https://ko-fi.com" target="_blank">Ko-Fi</a>
+            <a href="https://www.patreon.com" target="_blank">Patreon</a>
         </div>
-        <p class="header-subtitle">Curated tech wonders & creative sparks</p>
     </header>
-
-    <main class="content-grid">
-        <!-- Presence Widget -->
-        <section class="presence-widget pixel-box" aria-labelledby="presence-widget-title">
-            <h2 id="presence-widget-title" class="visually-hidden">Visitor Counter</h2>
-            <div class="counter-display">
-                <span class="counter-number" id="visitor-count">0000</span>
-                <span class="counter-label">curious explorers passed through</span>
-            </div>
-            <button id="presence-button" class="pixel-interactive" aria-label="Leave your digital footprint">
-                🌌 Leave Digital Footprint
-            </button>
-        </section>
-
-        <!-- Category Tags -->
-        <div class="categories-tags" role="tablist" aria-label="Resource Categories">
-            <button class="category-tag" role="tab" data-category="opinion-pieces" aria-selected="true" aria-controls="opinion-pieces">Opinion Pieces</button>
-            <button class="category-tag" role="tab" data-category="software" aria-selected="false" aria-controls="software">Software</button>
-            <button class="category-tag" role="tab" data-category="crypto" aria-selected="false" aria-controls="crypto">Crypto</button>
-            <button class="category-tag" role="tab" data-category="programming" aria-selected="false" aria-controls="programming">Programming</button>
-            <button class="category-tag" role="tab" data-category="game-dev" aria-selected="false" aria-controls="game-dev">Game Dev</button>
-            <button class="category-tag" role="tab" data-category="topics" aria-selected="false" aria-controls="topics">Topics</button>
-        </div>
-
-        <!-- Category Content Container -->
-        <div class="category-content-container">
-            <!-- Opinion Pieces -->
-            <div class="category-content" id="opinion-pieces" role="tabpanel" aria-labelledby="opinion-pieces-tab">
-                <!-- Content loaded dynamically -->
-            </div>
-
-            <!-- Software -->
-            <div class="category-content" id="software" role="tabpanel" aria-labelledby="software-tab">
-                <!-- Content loaded dynamically -->
-            </div>
-
-            <!-- Crypto -->
-            <div class="category-content" id="crypto" role="tabpanel" aria-labelledby="crypto-tab">
-                <!-- Content loaded dynamically -->
-            </div>
-
-            <!-- Programming -->
-            <div class="category-content" id="programming" role="tabpanel" aria-labelledby="programming-tab">
-                <!-- Content loaded dynamically -->
-            </div>
-
-            <!-- Game Dev -->
-            <div class="category-content" id="game-dev" role="tabpanel" aria-labelledby="game-dev-tab">
-                <!-- Content loaded dynamically -->
-            </div>
-
-            <!-- Topics -->
-            <div class="category-content" id="topics" role="tabpanel" aria-labelledby="topics-tab">
-                <!-- Content loaded dynamically -->
+    <main>
+        <h1>Welcome to Dean's List</h1>
+        <div class="category">
+            <h2 class="category-title" onclick="toggleCategory(this)">Category 1</h2>
+            <div class="category-content">
+                <ul>
+                    <li><a href="https://www.example.com" target="_blank">Resource 1</a></li>
+                    <li><a href="https://www.example.com" target="_blank">Resource 2</a></li>
+                </ul>
             </div>
         </div>
+        <div class="category">
+            <h2 class="category-title" onclick="toggleCategory(this)">Category 2</h2>
+            <div class="category-content">
+                <ul>
+                    <li><a href="https://www.example.com" target="_blank">Resource 1</a></li>
+                    <li><a href="https://www.example.com" target="_blank">Resource 2</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Add more categories as needed -->
     </main>
-
-    <footer class="pixel-footer">
-        <div class="footer-grid">
-            <div class="disclaimer">
-                ⚠ All magic belongs to original wizards.<br />
-                🛡️ No tracking - Presence is ephemeral.
-            </div>
-            <div class="github-cta">
-                <a href="https://github.com/suttonwilliamd/DeansList" target="_blank" rel="noopener noreferrer" aria-label="Improve this digital garden on GitHub" class="github-link">
-                    Improve this digital garden
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <button class="theme-switcher" onclick="toggleTheme()" aria-label="Toggle theme between light and dark mode">
-        <span id="theme-icon" aria-hidden="true">🌓</span>
-    </button>
-
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
