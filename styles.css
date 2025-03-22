@@ -1,262 +1,44 @@
-/* Root Variables for Themes */
-:root {
-    --bg: #1a1a1a;          /* Dark theme background */
-    --bg-secondary: #2d2d2d; /* Dark theme secondary background */
-    --text: #f0f0f0;        /* Dark theme text */
-    --text-secondary: #b0b0b0; /* Dark theme secondary text */
-    --accent: #6c5ce7;      /* Dark theme accent (tags, borders) */
-    --accent-dark: #4834d4; /* Dark theme accent for hover/active */
-    --hover-color: #8a7bf2; /* Dark theme hover color */
-    --card-bg: #232323;     /* Dark theme card background */
-    --transition-speed: 0.3s; /* Transition speed for animations */
-}
-
-[data-theme="light"] {
-    --bg: #f0f0f0;          /* Light theme background */
-    --bg-secondary: #e0e0e0; /* Light theme secondary background */
-    --text: #333333;        /* Light theme text */
-    --text-secondary: #666666; /* Light theme secondary text */
-    --accent: #4a90e2;      /* Light theme accent */
-    --accent-dark: #357ABD; /* Light theme accent for hover/active */
-    --hover-color: #6aa7e6; /* Light theme hover color */
-    --card-bg: #ffffff;     /* Light theme card background */
-}
-
-/* General Body Styles */
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Source Code Pro', monospace;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
-/* Accessibility Classes */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* Main Content Container */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header Styles */
-.pixel-header {
-    padding: 20px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid var(--accent);
-    transition: border-color var(--transition-speed);
-    background-color: var(--bg);
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    color: var(--accent);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
-    transition: color var(--transition-speed);
-}
-
-.header-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-top: 5px;
-    transition: color var(--transition-speed);
-}
-
-.creator-links a {
-    display: inline-block;
-    background-color: var(--accent);
-    color: var(--text);
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color var(--transition-speed), transform 0.2s;
-}
-
-.creator-links a:hover, 
-.creator-links a:focus {
-    background-color: var(--hover-color);
-    transform: translateY(-2px);
-    outline: none;
-}
-
-.creator-links a:active {
-    transform: translateY(0);
-}
-
-.pixel-arrow {
-    margin-left: 8px;
-}
-
-/* Presence Widget Styles */
-.presence-widget {
-    margin-bottom: 30px;
-    padding: 25px;
-    background-color: var(--card-bg);
-    border: 2px solid var(--accent);
-    border-radius: 4px;
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.counter-display {
-    margin-bottom: 15px;
-}
-
-#visitor-count {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--accent);
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
-    letter-spacing: 2px;
-    transition: color var(--transition-speed);
-}
-
-.counter-label {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    display: block;
-    margin-top: 5px;
-    transition: color var(--transition-speed);
-}
-
-#presence-button {
-    background-color: var(--accent);
+.support-bar a {
     color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 4px;
-    font-size: 1rem;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.support-bar a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.category {
+    margin: 15px 0;
+}
+
+.category-title {
     cursor: pointer;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: bold;
-    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
-#presence-button:hover,
-#presence-button:focus {
-    background-color: var(--hover-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    outline: none;
-}
-
-#presence-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Category Tags Styles */
-.categories-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.category-tag {
-    background-color: var(--accent);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1rem;
-    transition: background-color 0.2s, transform 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.category-tag:hover,
-.category-tag:focus {
-    background-color: var(--hover-color);
-    transform: translateY(-2px);
-    outline: none;
-}
-
-.category-tag.active {
-    background-color: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Category Content Styles */
 .category-content {
     display: none;
-    opacity: 0;
-    transition: opacity var(--transition-speed) ease;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
-
-.category-content.active {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    opacity: 1;
-}
-
-/* Resource Card Styles */
-.resource-card {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 4px;
-    border-left: 4px solid var(--accent);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s, background-color var(--transition-speed);
-}
-
-.resource-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.resource-card h3 {
-    margin-top: 0;
-    color: var(--accent);
-    border-bottom: 1px solid var(--text-secondary);
-    padding-bottom: 8px;
-    transition: color var(--transition-speed);
-}
-
-.resource-meta {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-}
-
-.resource-type {
-    color: var(--text-secondary);
-    font-style: italic;
-    transition: color var(--transition-speed);
-}
-
-.resource-rating {
-    color: #ffd700; /* Gold color for stars */
-}
-
-.resource-link {
-    display: inline-block;
-    color: var(--accent);
