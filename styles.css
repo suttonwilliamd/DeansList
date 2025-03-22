@@ -47,3 +47,19 @@ main {
     border: 1px solid #ccc;
     border-top: none;
 }
+
+.support-bar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.support-bar span {
+    margin-right: 10px;
+}
+
+.support-bar a {
+    margin: 0 10px;
+    display: inline-block; /* Ensure buttons are inline */
+}
