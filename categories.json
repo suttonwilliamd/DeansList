@@ -1,30 +1,114 @@
 {
-  "Opinion Pieces": {
-    "title": "Opinion Pieces",
-    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/Hbomberguy' target='_blank'>Hbomberguy</a> - In-depth video essays critiquing media and culture.</li></ul>"
+  "Creative Chaos": {
+    "description": "Art, music, and the beautiful mess of human creativity.",
+    "links": [
+      { "name": "Crosby Family Art", "url": "https://www.crosbyfamilyart.com" },
+      { "name": "Wintergatan", "url": "https://www.youtube.com/user/wintergatan2000" },
+      { "name": "Andrew Furmanczyk", "url": "https://www.youtube.com/user/Lypur" },
+      { "name": "Brass Against", "url": "https://www.youtube.com/c/BrassAgainst" },
+      { "name": "Charles Berthoud", "url": "https://www.youtube.com/c/CharlesBerthoud" },
+      { "name": "Frog Leap Studios", "url": "https://www.youtube.com/user/leolego" },
+      { "name": "Myuu", "url": "https://www.youtube.com/user/myuuji" }
+    ]
   },
-  "Software": {
-    "title": "Software",
-    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/t3dotgg' target='_blank'>t3dotgg Theo</a> - Insights on web development and the T3 stack.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/ThePrimeagen' target='_blank'>ThePrimeagen</a> - Programming tutorials focusing on Vim and TypeScript.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/FunFunFunction' target='_blank'>Funfunfunction MPJ</a> - Engaging JavaScript and functional programming content.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/Methmethmethod' target='_blank'>Methmethmethod</a> - JavaScript and web development tutorials.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/TheCodingTrain' target='_blank'>TheCodingTrain Daniel Shiffman</a> - Creative coding tutorials with p5.js.</li></ul>"
+  "Programming & Game Dev": {
+    "description": "Where code meets creativity, and games are born (or broken).",
+    "links": [
+      { "name": "VoidRealms", "url": "https://www.youtube.com/c/VoidRealms" },
+      { "name": "ThinMatrix", "url": "https://www.youtube.com/user/ThinMatrix" },
+      { "name": "Bisqwit", "url": "https://www.youtube.com/user/Bisqwit" },
+      { "name": "CoderRach / Moosader", "url": "https://www.youtube.com/user/Moosader" },
+      { "name": "CS50", "url": "https://www.youtube.com/c/cs50" },
+      { "name": "Derek Banas", "url": "https://www.youtube.com/user/derekbanas" },
+      { "name": "GameFromScratch", "url": "https://www.youtube.com/user/gamefromscratch" },
+      { "name": "Javidx9", "url": "https://www.youtube.com/c/javidx9" },
+      { "name": "Thomas Game Docs", "url": "https://www.youtube.com/c/ThomasGameDocs" }
+    ]
   },
-  "Dr. Petter's Software": {
-    "title": "Dr. Petter's Software",
-    "content": "<p>Dr. Petter is known for creating tools that enhance game development and sound design. Here are some of his notable contributions:</p><ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/musagi/' target='_blank'>Musagi</a> - A music composition tool for chiptune music.</li><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/sfxr/' target='_blank'>SFXR</a> - A retro-style sound effects generator.</li><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/sfxtreme/' target='_blank'>SFXTreme</a> - An advanced version with more features.</li><li><a class='text-blue-500 hover:underline' href='https://drpetter.se/project/sculptris/' target='_blank'>Sculptris</a> - A digital sculpting tool for creating 3D models.</li></ul>"
+  "Finance & Life Advice": {
+    "description": "Because money makes the world go round, and bad decisions make it interesting.",
+    "links": [
+      { "name": "Caleb Hammer", "url": "https://www.youtube.com/c/CalebHammer" },
+      { "name": "ZipTrader", "url": "https://www.youtube.com/c/ZipTrader" }
+    ]
   },
-  "Crypto": {
-    "title": "Crypto",
-    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=What+is+Bitcoin' target='_blank'>What is Bitcoin?</a> - Overview of Bitcoin.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=What+is+Ethereum' target='_blank'>What is Ethereum?</a> - Introduction to Ethereum and smart contracts.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=SHIB' target='_blank'>SHIB</a> - Information about the Shiba Inu cryptocurrency.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=Vitalik+Buterin' target='_blank'>Vitalik Buterin</a> - Insights from the co-founder of Ethereum.</li></ul>"
+  "Comedy & Trolls": {
+    "description": "For when you need a laugh, or just want to watch someone break the internet.",
+    "links": [
+      { "name": "CallMeKevin", "url": "https://www.youtube.com/c/CallMeKevin" },
+      { "name": "SpiffingBrit", "url": "https://www.youtube.com/c/TheSpiffingBrit" },
+      { "name": "Wizards with Guns", "url": "https://www.youtube.com/c/WizardsWithGuns" },
+      { "name": "Viva La Dirt League", "url": "https://www.youtube.com/c/VivaLaDirtLeague" },
+      { "name": "Bo Burnham", "url": "https://www.youtube.com/user/boburnham" },
+      { "name": "Trevor Wallace", "url": "https://www.youtube.com/c/TrevorWallaceComedy" },
+      { "name": "WKUK", "url": "https://www.youtube.com/c/OfficialWKUK" }
+    ]
   },
-  "Programming": {
-    "title": "Programming",
-    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/ChiliTomatoNoodle' target='_blank'>ChiliTomatoNoodle</a> - Programming tutorials and insights.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/ThinMatrix' target='_blank'>ThinMatrix</a> - Game development tutorials using Java.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/c/DerekBanas' target='_blank'>DerekBanas</a> - Comprehensive programming tutorials.</li></ul>"
+  "Educational & Interesting": {
+    "description": "Learn something new, or at least pretend you did.",
+    "links": [
+      { "name": "VSauce", "url": "https://www.youtube.com/user/Vsauce" },
+      { "name": "Tom Scott", "url": "https://www.youtube.com/user/enyay" },
+      { "name": "3Blue1Brown", "url": "https://www.youtube.com/c/3blue1brown" },
+      { "name": "CrashCourse", "url": "https://www.youtube.com/user/crashcourse" },
+      { "name": "Thought Slime", "url": "https://www.youtube.com/c/ThoughtSlime" },
+      { "name": "Miles Power", "url": "https://www.youtube.com/c/MilesPower1987" },
+      { "name": "NileRed / NileBlue", "url": "https://www.youtube.com/c/NileRed" }
+    ]
   },
-  "Game Dev": {
-    "title": "Game Dev",
-    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=Foundation+Game+Design+with+HTML5+and+JavaScript+Rex+van_der_Spuy' target='_blank'>Foundation Game Design with HTML5 and JavaScript</a> - Course by Rex van der Spuy.</li></ul>"
+  "Gaming Legends": {
+    "description": "Gamers who play, break, and sometimes fix games.",
+    "links": [
+      { "name": "Ambiguous Amphibian", "url": "https://www.youtube.com/c/AmbiguousAmphibian" },
+      { "name": "RealCivilEngineer", "url": "https://www.youtube.com/c/Realcivilengineer" },
+      { "name": "GrayStillPlays", "url": "https://www.youtube.com/c/GrayStillPlays" },
+      { "name": "ManyATrueNerd", "url": "https://www.youtube.com/c/ManyATrueNerd" },
+      { "name": "CaptainSparklez", "url": "https://www.youtube.com/user/CaptainSparklez" },
+      { "name": "martincitopants", "url": "https://www.youtube.com/c/martincitopants" }
+    ]
   },
-  "Topics": {
-    "title": "Topics",
-    "content": "<ul class='list-disc pl-5 space-y-2'><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=Creepypasta' target='_blank'>Creepypasta</a> - Explore creepypasta stories.</li><li><a class='text-blue-500 hover:underline' href='https://www.youtube.com/results?search_query=True+Crime' target='_blank'>True Crime</a> - Delve into true crime documentaries.</li></ul>"
+  "AI & Technology": {
+    "description": "Exploring the cutting edge of artificial intelligence and tech.",
+    "links": [
+      { "name": "Technology Connections", "url": "https://www.youtube.com/c/TechnologyConnections" },
+      { "name": "Nostalgia Nerd", "url": "https://www.youtube.com/c/NostalgiaNerd" },
+      { "name": "Austin Griffith", "url": "https://www.youtube.com/c/AustinGriffith" }
+    ]
+  },
+  "Don't Try This at Home": {
+    "description": "Seriously, don't. But it's fun to watch.",
+    "links": [
+      { "name": "Michael Reeves", "url": "https://www.youtube.com/c/MichaelReeves" },
+      { "name": "Ididathing", "url": "https://www.youtube.com/c/Ididathing" },
+      { "name": "Integza", "url": "https://www.youtube.com/c/Integza" },
+      { "name": "ElectroBOOM", "url": "https://www.youtube.com/c/ElectroBOOM" }
+    ]
+  },
+  "Gone but Not Forgotten": {
+    "description": "Channels that left a mark, even if they're no longer active.",
+    "links": [
+      { "name": "TotalBiscuit", "url": "https://www.youtube.com/user/TotalHalibut" },
+      { "name": "3D Buzz", "url": "https://www.youtube.com/user/3dbuzz" }
+    ]
+  },
+  "Wildlife & Nature": {
+    "description": "Because the real world is sometimes cooler than the virtual one.",
+    "links": [
+      { "name": "Very Tall Bart", "url": "https://www.youtube.com/c/VeryTallBart" },
+      { "name": "Fingees", "url": "https://www.youtube.com/c/Fingees" }
+    ]
+  },
+  "Brain Vacation": {
+    "description": "Turn off your brain and enjoy the ride.",
+    "links": [
+      { "name": "penguinz0", "url": "https://www.youtube.com/c/penguinz0" },
+      { "name": "Mr. Kitters the Cat", "url": "https://www.youtube.com/c/MrKitters" }
+    ]
+  },
+  "Pictures on the Video Site": {
+    "description": "Videos that feel like art, or just look cool.",
+    "links": [
+      { "name": "Near", "url": "https://www.youtube.com/c/Near" }
+    ]
   }
 }
