@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const categoryContainers = document.querySelectorAll(".category-container");
   let categoriesData = {};
 
-  // Load the JSON file with category content
+  // Fetch the JSON file with category content
   fetch("categories.json")
     .then((response) => response.json())
     .then((data) => {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error loading categories data:", error);
     });
 
-  // For each category container, add a click event on its bubble
+  // Add click event to each category bubble
   categoryContainers.forEach((container) => {
     const bubble = container.querySelector(".interest-bubble");
     const inlineContent = container.querySelector(".category-inline-content");
@@ -24,8 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // If content is not loaded, load it from the JSON data
       if (inlineContent.innerHTML.trim() === "") {
         if (categoriesData[category]) {
-          const { title, content } = categoriesData[category];
-          inlineContent.innerHTML = `<h2 class="text-2xl font-semibold mb-4">${title}</h2>${content}`;
+          const { description, links } = categoriesData[category];
+          const linksHTML = links
+            .map(
+              (link) =>
+                `<li><a class="text-blue-500 hover:underline" href="${link.url}" target="_blank">${link.name}</a></li>`
+            )
+            .join("");
+          inlineContent.innerHTML = `<p class="mb-4">${description}</p><ul class="list-disc pl-5 space-y-2">${linksHTML}</ul>`;
         } else {
           inlineContent.innerHTML = `<p class="text-center text-gray-500">Content for ${category} coming soon!</p>`;
         }
