@@ -1,70 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dean's List</title>
-  <!-- Include Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Optional: Link to custom styles if needed -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dean's List</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Link to custom styles if needed -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white py-6 shadow-md">
+      <div
+        class="container mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+      >
+        <span class="font-semibold">Support me:</span>
+        <a
+          href="YOUR_AFFILIATE_LINK"
+          target="_blank"
+          class="transition transform hover:scale-105"
+        >
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/images/amazon-logo.png"
+            alt="Support me on Amazon"
+            class="w-28 rounded"
+          />
+        </a>
+        <!-- Custom Patreon Button -->
+        <a
+          href="https://patreon.com/user?u=102886"
+          target="_blank"
+          class="inline-block px-6 py-2 bg-[#f96854] text-white font-semibold rounded-md shadow-md transition-all hover:bg-[#f7433d]"
+        >
+          Support me on Patreon
+        </a>
+      </div>
+    </header>
 
-  <!-- Header -->
-  <header class="bg-gray-800 text-white py-6 shadow-md">
-    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-      <a href="https://patreon.com/user?u=102886" target="_blank" 
-   class="inline-block px-6 py-2 bg-[#f96854] text-white font-semibold rounded-md shadow-md transition-all hover:bg-[#f7433d]">
-  Support me on Patreon
-</a>
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto px-4 py-8">
+      <h1
+        class="text-4xl font-bold text-center mb-8 text-gray-900"
+      >
+        Welcome to Dean's List
+      </h1>
 
-    </div>
-  </header>
+      <!-- Interests (bubble) Container -->
+      <div class="flex flex-wrap justify-center gap-4">
+        <!-- Wrap each bubble in a container to allow inline insertion of content -->
+        <div class="category-wrapper">
+          <a
+            href="#"
+            class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105"
+            data-category="Opinion Pieces"
+            >Opinion Pieces</a
+          >
+        </div>
+        <div class="category-wrapper">
+          <a
+            href="#"
+            class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105"
+            data-category="Software"
+            >Software</a
+          >
+        </div>
+        <div class="category-wrapper">
+          <a
+            href="#"
+            class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105"
+            data-category="Dr. Petter's Software"
+            >Dr. Petter's Software</a
+          >
+        </div>
+        <div class="category-wrapper">
+          <a
+            href="#"
+            class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105"
+            data-category="Crypto"
+            >Crypto</a
+          >
+        </div>
+        <div class="category-wrapper">
+          <a
+            href="#"
+            class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105"
+            data-category="Programming"
+            >Programming</a
+          >
+        </div>
+        <div class="category-wrapper">
+          <a
+            href="#"
+            class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105"
+            data-category="Game Dev"
+            >Game Dev</a
+          >
+        </div>
+        <div class="category-wrapper">
+          <a
+            href="#"
+            class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105"
+            data-category="Topics"
+            >Topics</a
+          >
+        </div>
+      </div>
+    </main>
 
-  <!-- Main Content -->
-  <main class="flex-1 container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-center mb-8 text-gray-900">Welcome to Dean's List</h1>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-4 shadow-inner">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2023 Dean's List. All rights reserved.</p>
+        <p>
+          Hosted on
+          <a
+            href="https://pages.github.com/"
+            class="text-blue-400 hover:underline"
+            target="_blank"
+            >GitHub Pages</a
+          >.
+        </p>
+      </div>
+      <!-- Empty space for Ko-Fi widget -->
+      <div class="h-20"></div>
+    </footer>
 
-    <!-- Interests (bubble) Container -->
-<div class="flex flex-wrap justify-center gap-4">
-  <a href="#" class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105" data-category="Opinion Pieces">Opinion Pieces</a>
-  <a href="#" class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105" data-category="Software">Software</a>
-  <a href="#" class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105" data-category="Dr. Petter's Software">Dr. Petter's Software</a>
-  <a href="#" class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105" data-category="Crypto">Crypto</a>
-  <a href="#" class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105" data-category="Programming">Programming</a>
-  <a href="#" class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105" data-category="Game Dev">Game Dev</a>
-  <a href="#" class="interest-bubble px-6 py-3 bg-blue-500 text-white rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105" data-category="Topics">Topics</a>
-</div>
-
-
-    <!-- Content Area -->
-    <div id="content-area" class="mt-8 p-6 bg-white rounded shadow border-t border-gray-200 max-w-4xl mx-auto">
-      <p class="text-center text-gray-500">Select an interest above to view content.</p>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-4 shadow-inner">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2023 Dean's List. All rights reserved.</p>
-      <p>Hosted on <a href="https://pages.github.com/" class="text-blue-400 hover:underline" target="_blank">GitHub Pages</a>.</p>
-    </div>
-    <!-- Empty space for Ko-Fi widget -->
-    <div class="h-20"></div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <!-- Ko-fi widget script -->
-  <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
-  <script>
-    kofiWidgetOverlay.draw('deanslist', {
-      'type': 'floating-chat',
-      'floating-chat.donateButton.text': 'Support me',
-      'floating-chat.donateButton.background-color': '#00b9fe',
-      'floating-chat.donateButton.text-color': '#fff'
-    });
-  </script>
-</body>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- Ko-fi widget script -->
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+      kofiWidgetOverlay.draw("deanslist", {
+        "type": "floating-chat",
+        "floating-chat.donateButton.text": "Support me",
+        "floating-chat.donateButton.background-color": "#00b9fe",
+        "floating-chat.donateButton.text-color": "#fff"
+      });
+    </script>
+  </body>
 </html>
