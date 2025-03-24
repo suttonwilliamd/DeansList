@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dean's List - Tag System</title>
-    <!-- Include Tailwind CSS via CDN -->
+    <meta name="description" content="Dean's List - Curated collection of interesting YouTube channels and creative resources">
+    <title>Dean's List - Curated Channel Collection</title>
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons (optional) -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -15,130 +16,59 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-gray-50 text-gray-800">
+  <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
     <header class="bg-gray-800 text-white py-6 shadow-md">
       <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
-        <h1 class="text-2xl font-bold">Dean's List</h1>
+        <h1 class="text-2xl font-bold mb-4 sm:mb-0">Dean's List</h1>
         <a
           href="https://patreon.com/user?u=102886"
           target="_blank"
-          class="px-6 py-2 bg-[#f96854] text-white font-semibold rounded-md shadow-md transition-all hover:bg-[#f7433d]"
+          rel="noopener noreferrer"
+          class="px-6 py-2 bg-[#f96854] text-white font-semibold rounded-md shadow-md transition-all hover:bg-[#f7433d] hover:scale-105"
         >
-          Support me on Patreon
+          <i class="fas fa-heart mr-2"></i>Support on Patreon
         </a>
       </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto p-4">
-      <!-- Tag Filter Panel -->
-      <section id="tag-filters" class="flex flex-wrap gap-2 mb-8 items-center">
-        <!-- Reset Button -->
-        <button
-          id="reset-filters"
-          class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-2 py-2 rounded-full"
-          title="Reset Filters"
-        >
-          <i class="fas fa-redo"></i>
-        </button>
-        <!-- Tag buttons -->
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Creative Chaos">
-          Creative Chaos
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Art">
-          Art
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Music">
-          Music
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Engineering">
-          Engineering
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Programming">
-          Programming
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Game Dev">
-          Game Dev
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Tutorial">
-          Tutorial
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Education">
-          Education
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Finance">
-          Finance
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Life Advice">
-          Life Advice
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Comedy">
-          Comedy
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Trolls">
-          Trolls
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Gaming">
-          Gaming
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Educational">
-          Educational
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Interesting">
-          Interesting
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Mathematics">
-          Mathematics
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Travel">
-          Travel
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Sketch">
-          Sketch
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Don't Try This">
-          Don't Try This
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Experimental">
-          Experimental
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="DIY">
-          DIY
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Legacy">
-          Legacy
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Wildlife">
-          Wildlife
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Nature">
-          Nature
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Adventure">
-          Adventure
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Pictures">
-          Pictures
-        </button>
-        <button class="tag-btn bg-blue-500 text-white px-4 py-2 rounded" data-tag="Visual">
-          Visual
-        </button>
+    <main class="container mx-auto p-4 flex-grow">
+      <!-- Tag Filter Section -->
+      <section class="mb-8">
+        <div class="flex flex-wrap gap-2 items-center">
+          <!-- Reset Button (only static element) -->
+          <button
+            id="reset-filters"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-2 rounded-full transition-colors"
+            title="Reset Filters"
+          >
+            <i class="fas fa-redo"></i>
+            <span class="sr-only">Reset filters</span>
+          </button>
+          <!-- Dynamic tags will be inserted here -->
+          <div id="tag-filters" class="flex flex-wrap gap-2"></div>
+        </div>
       </section>
 
-      <!-- Channels Display Area -->
-      <section id="channels" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></section>
+      <!-- Channels Grid -->
+      <section id="channels" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-4 shadow-inner">
+    <footer class="bg-gray-800 text-gray-300 py-4 shadow-inner mt-8">
       <div class="container mx-auto text-center">
         <p>&copy; 2025 Dean's List. All rights reserved.</p>
-        <p>
+        <p class="mt-1">
           Hosted on
-          <a class="text-blue-400 hover:underline" href="https://pages.github.com/" target="_blank">
+          <a 
+            class="text-blue-400 hover:underline" 
+            href="https://pages.github.com/" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub Pages
-          </a>.
+          </a>
         </p>
       </div>
     </footer>
