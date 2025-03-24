@@ -23,16 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const category = bubble.getAttribute("data-category");
 
-        const isHidden = inlineContent.classList.contains("hidden");
-
-        // Load content if needed
+        // If the content is empty, load from JSON data
         if (inlineContent.innerHTML.trim() === "") {
           if (categoriesData[category]) {
             const { description, links } = categoriesData[category];
             const linksHTML = links
               .map(
                 (link) =>
-                  `<li class="mb-2"><a class="text-blue-600 hover:text-blue-800 transition-colors flex items-center" href="${link.url}" target="_blank"><i class="fas fa-external-link-alt mr-1 text-sm"></i>${link.name}</a></li>`
+                  `<li class="mb-2">
+                     <a class="text-blue-600 hover:text-blue-800 transition-colors flex items-center"
+                        href="${link.url}" target="_blank">
+                        <i class="fas fa-external-link-alt mr-1 text-sm"></i>${link.name}
+                     </a>
+                   </li>`
               )
               .join("");
             inlineContent.innerHTML = `
@@ -45,18 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
 
-        // Toggle visibility
-        if (isHidden) {
-          inlineContent.classList.remove("hidden");
-          setTimeout(() => {
-            inlineContent.classList.add("active"); // Trigger the fade-in
-          }, 10);
-        } else {
-          inlineContent.classList.remove("active");
-          setTimeout(() => {
-            inlineContent.classList.add("hidden");
-          }, 300);
-        }
+        // Toggle the visibility of this section only
+        inlineContent.classList.toggle("hidden");
       });
     });
   }
