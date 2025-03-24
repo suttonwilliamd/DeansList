@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Render the list of channels in the #channels element
   function displayChannels(channels) {
     const container = document.getElementById("channels");
+    if (channels.length === 0) {
+      container.innerHTML = `<p class="text-center text-gray-500">No channels match the selected tags.</p>`;
+      return;
+    }
     container.innerHTML = channels
       .map(
         (channel) => `
@@ -52,19 +56,24 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.add("bg-blue-500");
       }
 
-      // Get an array of selected tags from buttons marked active
+      // Get an array of selected tags (trimmed and lower-cased for robust matching)
       const selectedTags = Array.from(tagButtons)
         .filter((btn) => btn.classList.contains("active"))
-        .map((btn) => btn.getAttribute("data-tag"));
+        .map((btn) => btn.getAttribute("data-tag").toLowerCase().trim());
 
-      // If no tags are selected, display all channels
+      console.log("Selected Tags:", selectedTags);
+
+      // If no tags are selected, display all channels.
       if (selectedTags.length === 0) {
         displayChannels(allChannels);
       } else {
-        // For an "OR" filter: show channels that include at least one of the selected tags
+        // For an "OR" filter: show channels that include at least one of the selected tags.
         const filtered = allChannels.filter((channel) =>
-          channel.tags.some((tag) => selectedTags.includes(tag))
+          channel.tags.some(
+            (tag) => selectedTags.indexOf(tag.toLowerCase().trim()) !== -1
+          )
         );
+        console.log("Filtered Channels:", filtered);
         displayChannels(filtered);
       }
     });
