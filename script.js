@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       allChannels = data;
       displayChannels(allChannels);
     })
-    .catch((error) => console.error("Error loading channels data:", error));
+    .catch((error) =>
+      console.error("Error loading channels data:", error)
+    );
 
   // Render the list of channels in the #channels element
   function displayChannels(channels) {
@@ -42,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .join("");
   }
 
-  // Tag filtering logic
+  // Tag filtering logic (using AND logic)
   const tagButtons = document.querySelectorAll(".tag-btn");
   tagButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      // Toggle active state for the tag button
+      // Toggle active state for the clicked tag button
       button.classList.toggle("active");
       if (button.classList.contains("active")) {
         button.classList.remove("bg-blue-500");
@@ -56,26 +58,43 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.add("bg-blue-500");
       }
 
-      // Get an array of selected tags (trimmed and lower-cased for robust matching)
+      // Get an array of selected tags (normalized to lowercase)
       const selectedTags = Array.from(tagButtons)
         .filter((btn) => btn.classList.contains("active"))
-        .map((btn) => btn.getAttribute("data-tag").toLowerCase().trim());
+        .map((btn) =>
+          btn.getAttribute("data-tag").toLowerCase().trim()
+        );
 
-      console.log("Selected Tags:", selectedTags);
-
-      // If no tags are selected, display all channels.
+      // If no tags are selected, show all channels.
       if (selectedTags.length === 0) {
         displayChannels(allChannels);
       } else {
-        // For an "OR" filter: show channels that include at least one of the selected tags.
-        const filtered = allChannels.filter((channel) =>
-          channel.tags.some(
-            (tag) => selectedTags.indexOf(tag.toLowerCase().trim()) !== -1
-          )
-        );
-        console.log("Filtered Channels:", filtered);
+        // AND filter: Include a channel only if it has every selected tag.
+        const filtered = allChannels.filter((channel) => {
+          const channelTags = channel.tags.map((tag) =>
+            tag.toLowerCase().trim()
+          );
+          return selectedTags.every((selected) =>
+            channelTags.includes(selected)
+          );
+        });
         displayChannels(filtered);
       }
     });
   });
+
+  // Reset filters button functionality
+  const resetButton = document.getElementById("reset-filters");
+  if (resetButton) {
+    resetButton.addEventListener("click", function () {
+      // Remove active state from all tag buttons and restore default styling
+      tagButtons.forEach((btn) => {
+        btn.classList.remove("active");
+        btn.classList.remove("bg-blue-700");
+        btn.classList.add("bg-blue-500");
+      });
+      // Display all channels
+      displayChannels(allChannels);
+    });
+  }
 });
