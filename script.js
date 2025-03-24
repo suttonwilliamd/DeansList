@@ -23,11 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const category = bubble.getAttribute("data-category");
 
-        // Clear previous content when collapsing
-        if (!inlineContent.classList.contains("hidden")) {
-          inlineContent.classList.add("hidden");
-          return;
-        }
+        const isHidden = inlineContent.classList.contains("hidden");
 
         // Load content if needed
         if (inlineContent.innerHTML.trim() === "") {
@@ -50,21 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Toggle visibility
-        // Add 'active' class instead of toggling 'hidden'
-        inlineContent.classList.remove("hidden");
-        setTimeout(() => {
-          inlineContent.classList.add("active"); // Trigger the fade-in
-        }, 10);
-
-        // Collapse other open categories
-        document.querySelectorAll(".category-inline-content").forEach((content) => {
-          if (content !== inlineContent && content.classList.contains("active")) {
-            content.classList.remove("active");
-            setTimeout(() => {
-              content.classList.add("hidden");
-            }, 300);
-          }
-        });
+        if (isHidden) {
+          inlineContent.classList.remove("hidden");
+          setTimeout(() => {
+            inlineContent.classList.add("active"); // Trigger the fade-in
+          }, 10);
+        } else {
+          inlineContent.classList.remove("active");
+          setTimeout(() => {
+            inlineContent.classList.add("hidden");
+          }, 300);
+        }
       });
     });
   }
