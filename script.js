@@ -17,25 +17,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     categoryContainers.forEach((container) => {
       const bubble = container.querySelector(".interest-bubble");
-      const inlineContent = container.querySelector(".category-inline-content");
+      const inlineContent =
+        container.querySelector(".category-inline-content");
 
       bubble.addEventListener("click", function (e) {
         e.preventDefault();
         const category = bubble.getAttribute("data-category");
 
-        // If the content is empty, load from JSON data
-        if (inlineContent.innerHTML.trim() === "") {
+        // Load the content if not already loaded
+        if (!inlineContent.dataset.loaded) {
           if (categoriesData[category]) {
             const { description, links } = categoriesData[category];
             const linksHTML = links
               .map(
                 (link) =>
                   `<li class="mb-2">
-                     <a class="text-blue-600 hover:text-blue-800 transition-colors flex items-center"
-                        href="${link.url}" target="_blank">
-                        <i class="fas fa-external-link-alt mr-1 text-sm"></i>${link.name}
-                     </a>
-                   </li>`
+                    <a class="text-blue-600 hover:text-blue-800 transition-colors flex items-center"
+                       href="${link.url}" target="_blank">
+                      <i class="fas fa-external-link-alt mr-1 text-sm"></i>${link.name}
+                    </a>
+                  </li>`
               )
               .join("");
             inlineContent.innerHTML = `
@@ -46,9 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
           } else {
             inlineContent.innerHTML = `<p class="text-gray-500">Content for ${category} coming soon!</p>`;
           }
+          // Mark as loaded so we don't reload the content again
+          inlineContent.dataset.loaded = "true";
         }
 
-        // Toggle the visibility of this section only
+        // Toggle the visibility of just this section
         inlineContent.classList.toggle("hidden");
       });
     });
