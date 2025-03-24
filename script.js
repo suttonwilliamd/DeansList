@@ -36,10 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
             const linksHTML = links
               .map(
                 (link) =>
-                  `<li class="mb-2"><a class="text-blue-600 hover:text-blue-800 transition-colors" href="${link.url}" target="_blank">${link.name}</a></li>`
+                  `<li class="mb-2"><a class="text-blue-600 hover:text-blue-800 transition-colors flex items-center" href="${link.url}" target="_blank"><i class="fas fa-external-link-alt mr-1 text-sm"></i>${link.name}</a></li>`
               )
               .join("");
             inlineContent.innerHTML = `
+              <h3 class="font-semibold mb-2">${category}</h3>
               <p class="mb-4 text-gray-700">${description}</p>
               <ul class="space-y-2">${linksHTML}</ul>
             `;
@@ -49,12 +50,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Toggle visibility
-        inlineContent.classList.toggle("hidden");
-        
+        // Add 'active' class instead of toggling 'hidden'
+        inlineContent.classList.remove("hidden");
+        setTimeout(() => {
+          inlineContent.classList.add("active"); // Trigger the fade-in
+        }, 10);
+
         // Collapse other open categories
         document.querySelectorAll(".category-inline-content").forEach((content) => {
-          if (content !== inlineContent && !content.classList.contains("hidden")) {
-            content.classList.add("hidden");
+          if (content !== inlineContent && content.classList.contains("active")) {
+            content.classList.remove("active");
+            setTimeout(() => {
+              content.classList.add("hidden");
+            }, 300);
           }
         });
       });
