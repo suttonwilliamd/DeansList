@@ -1,0 +1,314 @@
+[
+  {
+    "name": "Crosby Family Art",
+    "url": "https://www.crosbyfamilyart.com",
+    "description": "Showcasing art and creative visuals.",
+    "tags": ["Creative Chaos", "Art"]
+  },
+  {
+    "name": "Wintergatan",
+    "url": "https://www.youtube.com/user/wintergatan2000",
+    "description": "Music, engineering, and creative chaos in motion.",
+    "tags": ["Creative Chaos", "Music", "Engineering"]
+  },
+  {
+    "name": "Andrew Furmanczyk",
+    "url": "https://www.youtube.com/user/Lypur",
+    "description": "Exploring experimental music and art.",
+    "tags": ["Creative Chaos", "Music", "Experimental"]
+  },
+  {
+    "name": "Brass Against",
+    "url": "https://www.youtube.com/c/BrassAgainst",
+    "description": "Live performance meets political commentary.",
+    "tags": ["Creative Chaos", "Music", "Performance"]
+  },
+  {
+    "name": "Charles Berthoud",
+    "url": "https://www.youtube.com/c/CharlesBerthoud",
+    "description": "Mixing classical music with unique visuals.",
+    "tags": ["Creative Chaos", "Music", "Experimental"]
+  },
+  {
+    "name": "Frog Leap Studios",
+    "url": "https://www.youtube.com/user/leolego",
+    "description": "Animation and creative production.",
+    "tags": ["Creative Chaos", "Animation", "Creativity"]
+  },
+  {
+    "name": "Myuu",
+    "url": "https://www.youtube.com/user/myuuji",
+    "description": "Mellow tunes and ambient music.",
+    "tags": ["Creative Chaos", "Music", "Chill"]
+  },
+  {
+    "name": "VoidRealms",
+    "url": "https://www.youtube.com/c/VoidRealms",
+    "description": "Programming techniques and game development insights.",
+    "tags": ["Programming", "Game Dev"]
+  },
+  {
+    "name": "ThinMatrix",
+    "url": "https://www.youtube.com/user/ThinMatrix",
+    "description": "Coding tutorials with a focus on game development.",
+    "tags": ["Programming", "Game Dev", "Tutorial"]
+  },
+  {
+    "name": "Bisqwit",
+    "url": "https://www.youtube.com/user/Bisqwit",
+    "description": "Deep dives into programming and game design.",
+    "tags": ["Programming", "Game Dev", "Tutorial"]
+  },
+  {
+    "name": "CoderRach / Moosader",
+    "url": "https://www.youtube.com/user/Moosader",
+    "description": "Fun programming projects and tutorials.",
+    "tags": ["Programming", "Game Dev", "Tutorial"]
+  },
+  {
+    "name": "CS50",
+    "url": "https://www.youtube.com/c/cs50",
+    "description": "Harvard’s introductory computer science course.",
+    "tags": ["Programming", "Game Dev", "Education"]
+  },
+  {
+    "name": "Derek Banas",
+    "url": "https://www.youtube.com/user/derekbanas",
+    "description": "Programming tutorials that cover a wide range of topics.",
+    "tags": ["Programming", "Game Dev", "Tutorial"]
+  },
+  {
+    "name": "GameFromScratch",
+    "url": "https://www.youtube.com/user/gamefromscratch",
+    "description": "Insights into game development from start to finish.",
+    "tags": ["Programming", "Game Dev", "Tutorial"]
+  },
+  {
+    "name": "Javidx9",
+    "url": "https://www.youtube.com/c/javidx9",
+    "description": "Creative programming and game development projects.",
+    "tags": ["Programming", "Game Dev", "Tutorial", "Creative"]
+  },
+  {
+    "name": "Thomas Game Docs",
+    "url": "https://www.youtube.com/c/ThomasGameDocs",
+    "description": "Game reviews and behind the scenes insights.",
+    "tags": ["Programming", "Game Dev", "Review"]
+  },
+  {
+    "name": "Caleb Hammer",
+    "url": "https://www.youtube.com/c/CalebHammer",
+    "description": "Unconventional finance and life advice.",
+    "tags": ["Finance", "Life Advice"]
+  },
+  {
+    "name": "ZipTrader",
+    "url": "https://www.youtube.com/c/ZipTrader",
+    "description": "Market insights and trading tips with a twist.",
+    "tags": ["Finance", "Life Advice"]
+  },
+  {
+    "name": "CallMeKevin",
+    "url": "https://www.youtube.com/c/CallMeKevin",
+    "description": "Humorous take on gaming and everyday life.",
+    "tags": ["Comedy", "Trolls", "Gaming"]
+  },
+  {
+    "name": "SpiffingBrit",
+    "url": "https://www.youtube.com/c/TheSpiffingBrit",
+    "description": "Witty gaming commentary and humorous insights.",
+    "tags": ["Comedy", "Trolls"]
+  },
+  {
+    "name": "Wizards with Guns",
+    "url": "https://www.youtube.com/c/WizardsWithGuns",
+    "description": "A mix of gaming, comedy, and action.",
+    "tags": ["Comedy", "Trolls", "Gaming"]
+  },
+  {
+    "name": "Viva La Dirt League",
+    "url": "https://www.youtube.com/c/VivaLaDirtLeague",
+    "description": "Sketch comedy with a gaming twist.",
+    "tags": ["Comedy", "Trolls", "Sketch"]
+  },
+  {
+    "name": "Bo Burnham",
+    "url": "https://www.youtube.com/user/boburnham",
+    "description": "Satirical comedy with musical elements.",
+    "tags": ["Comedy", "Music", "Satire"]
+  },
+  {
+    "name": "Trevor Wallace",
+    "url": "https://www.youtube.com/c/TrevorWallaceComedy",
+    "description": "Jokes and commentary about modern culture.",
+    "tags": ["Comedy", "Trolls"]
+  },
+  {
+    "name": "WKUK",
+    "url": "https://www.youtube.com/c/OfficialWKUK",
+    "description": "Humorous commentary and entertaining content.",
+    "tags": ["Comedy", "Trolls"]
+  },
+  {
+    "name": "VSauce",
+    "url": "https://www.youtube.com/user/Vsauce",
+    "description": "Exploring the mysteries of science and philosophy.",
+    "tags": ["Educational", "Interesting", "Science"]
+  },
+  {
+    "name": "Tom Scott",
+    "url": "https://www.youtube.com/user/enyay",
+    "description": "Informative videos on technology, language, and travel.",
+    "tags": ["Educational", "Interesting", "Technology", "Travel"]
+  },
+  {
+    "name": "3Blue1Brown",
+    "url": "https://www.youtube.com/c/3blue1brown",
+    "description": "Mathematics explained through visually engaging videos.",
+    "tags": ["Educational", "Interesting", "Mathematics", "Programming"]
+  },
+  {
+    "name": "CrashCourse",
+    "url": "https://www.youtube.com/user/crashcourse",
+    "description": "Quick and engaging overviews on a variety of subjects.",
+    "tags": ["Educational", "Interesting", "History", "Science"]
+  },
+  {
+    "name": "Thought Slime",
+    "url": "https://www.youtube.com/c/ThoughtSlime",
+    "description": "Commentary on science and technology with humor.",
+    "tags": ["Educational", "Interesting", "Science", "Commentary"]
+  },
+  {
+    "name": "Miles Power",
+    "url": "https://www.youtube.com/c/MilesPower1987",
+    "description": "Science experiments and explorations in nature.",
+    "tags": ["Educational", "Interesting", "Science"]
+  },
+  {
+    "name": "NileRed / NileBlue",
+    "url": "https://www.youtube.com/c/NileRed",
+    "description": "Chemistry experiments and fascinating reactions.",
+    "tags": ["Educational", "Interesting", "Chemistry", "Experiment"]
+  },
+  {
+    "name": "Ambiguous Amphibian",
+    "url": "https://www.youtube.com/c/AmbiguousAmphibian",
+    "description": "Gaming commentary and nostalgia-inducing content.",
+    "tags": ["Gaming", "Legends", "Commentary"]
+  },
+  {
+    "name": "RealCivilEngineer",
+    "url": "https://www.youtube.com/c/Realcivilengineer",
+    "description": "Engineering expertise applied to the world of gaming.",
+    "tags": ["Gaming", "Legends", "Engineering", "Commentary"]
+  },
+  {
+    "name": "GrayStillPlays",
+    "url": "https://www.youtube.com/c/GrayStillPlays",
+    "description": "Long-form gaming content with a relaxed vibe.",
+    "tags": ["Gaming", "Legends", "Commentary"]
+  },
+  {
+    "name": "ManyATrueNerd",
+    "url": "https://www.youtube.com/c/ManyATrueNerd",
+    "description": "Gaming and tech commentary with a humorous slant.",
+    "tags": ["Gaming", "Legends", "Commentary"]
+  },
+  {
+    "name": "CaptainSparklez",
+    "url": "https://www.youtube.com/user/CaptainSparklez",
+    "description": "Iconic gaming content that spans years.",
+    "tags": ["Gaming", "Legends", "Entertainment"]
+  },
+  {
+    "name": "martincitopants",
+    "url": "https://www.youtube.com/c/martincitopants",
+    "description": "Gaming commentary and entertainment with a twist.",
+    "tags": ["Gaming", "Legends", "Entertainment"]
+  },
+  {
+    "name": "Technology Connections",
+    "url": "https://www.youtube.com/c/TechnologyConnections",
+    "description": "Exploring the history and technology behind modern devices.",
+    "tags": ["AI", "Technology", "Educational"]
+  },
+  {
+    "name": "Nostalgia Nerd",
+    "url": "https://www.youtube.com/c/NostalgiaNerd",
+    "description": "Tech history and retro evaluations for the modern age.",
+    "tags": ["AI", "Technology", "Educational", "History"]
+  },
+  {
+    "name": "Austin Griffith",
+    "url": "https://www.youtube.com/c/AustinGriffith",
+    "description": "Practical tutorials on modern web development and tech.",
+    "tags": ["AI", "Technology", "Tutorial"]
+  },
+  {
+    "name": "Michael Reeves",
+    "url": "https://www.youtube.com/c/MichaelReeves",
+    "description": "Experimental and humorous robotics and tech projects.",
+    "tags": ["Don't Try This", "Experimental", "Comedy"]
+  },
+  {
+    "name": "Ididathing",
+    "url": "https://www.youtube.com/c/Ididathing",
+    "description": "DIY experiments and quirky projects you probably shouldn't try at home.",
+    "tags": ["Don't Try This", "Experimental", "DIY"]
+  },
+  {
+    "name": "Integza",
+    "url": "https://www.youtube.com/c/Integza",
+    "description": "Stunning DIY builds and creative projects.",
+    "tags": ["Don't Try This", "Experimental", "DIY"]
+  },
+  {
+    "name": "ElectroBOOM",
+    "url": "https://www.youtube.com/c/ElectroBOOM",
+    "description": "Electrical experiments with a humorous edge.",
+    "tags": ["Don't Try This", "Experimental", "Comedy", "Engineering"]
+  },
+  {
+    "name": "TotalBiscuit",
+    "url": "https://www.youtube.com/user/TotalHalibut",
+    "description": "A legendary commentary on gaming and tech.",
+    "tags": ["Gone but Not Forgotten", "Gaming", "Commentary", "Legacy"]
+  },
+  {
+    "name": "3D Buzz",
+    "url": "https://www.youtube.com/user/3dbuzz",
+    "description": "Nostalgic tech reviews and insights.",
+    "tags": ["Gone but Not Forgotten", "Technology", "Review", "Legacy"]
+  },
+  {
+    "name": "Very Tall Bart",
+    "url": "https://www.youtube.com/c/VeryTallBart",
+    "description": "Exploring the wild side of nature.",
+    "tags": ["Wildlife", "Nature", "Entertainment", "Adventure"]
+  },
+  {
+    "name": "Fingees",
+    "url": "https://www.youtube.com/c/Fingees",
+    "description": "Unique take on wildlife and outdoor adventures.",
+    "tags": ["Wildlife", "Nature", "Entertainment"]
+  },
+  {
+    "name": "penguinz0",
+    "url": "https://www.youtube.com/c/penguinz0",
+    "description": "Irreverent commentary and humor to unwind.",
+    "tags": ["Brain Vacation", "Comedy", "Gaming"]
+  },
+  {
+    "name": "Mr. Kitters the Cat",
+    "url": "https://www.youtube.com/c/MrKitters",
+    "description": "Lighthearted, whimsical content to ease your mind.",
+    "tags": ["Brain Vacation", "Comedy", "Casual"]
+  },
+  {
+    "name": "Near",
+    "url": "https://www.youtube.com/c/Near",
+    "description": "Artistic videos that blur the line between video and art.",
+    "tags": ["Pictures", "Art", "Visual"]
+  }
+]
