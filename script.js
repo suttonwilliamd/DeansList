@@ -1,59 +1,72 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let categoriesData = {};
+  let allChannels = [];
 
-  // Fetch the JSON file first
-  fetch("categories.json")
+  // Fetch channels data from channels.json
+  fetch("channels.json")
     .then((response) => response.json())
     .then((data) => {
-      categoriesData = data;
-      setupCategoryHandlers();
+      allChannels = data;
+      displayChannels(allChannels);
     })
-    .catch((error) => {
-      console.error("Error loading categories data:", error);
-    });
+    .catch((error) => console.error("Error loading channels data:", error));
 
-  function setupCategoryHandlers() {
-    const categoryContainers = document.querySelectorAll(".category-container");
-
-    categoryContainers.forEach((container) => {
-      const bubble = container.querySelector(".interest-bubble");
-      const inlineContent =
-        container.querySelector(".category-inline-content");
-
-      bubble.addEventListener("click", function (e) {
-        e.preventDefault();
-        const category = bubble.getAttribute("data-category");
-
-        // Load the content if not already loaded
-        if (!inlineContent.dataset.loaded) {
-          if (categoriesData[category]) {
-            const { description, links } = categoriesData[category];
-            const linksHTML = links
-              .map(
-                (link) =>
-                  `<li class="mb-2">
-                    <a class="text-blue-600 hover:text-blue-800 transition-colors flex items-center"
-                       href="${link.url}" target="_blank">
-                      <i class="fas fa-external-link-alt mr-1 text-sm"></i>${link.name}
-                    </a>
-                  </li>`
-              )
-              .join("");
-            inlineContent.innerHTML = `
-              <h3 class="font-semibold mb-2">${category}</h3>
-              <p class="mb-4 text-gray-700">${description}</p>
-              <ul class="space-y-2">${linksHTML}</ul>
-            `;
-          } else {
-            inlineContent.innerHTML = `<p class="text-gray-500">Content for ${category} coming soon!</p>`;
-          }
-          // Mark as loaded so we don't reload the content again
-          inlineContent.dataset.loaded = "true";
-        }
-
-        // Toggle the visibility of just this section
-        inlineContent.classList.toggle("hidden");
-      });
-    });
+  // Render the list of channels in the #channels element
+  function displayChannels(channels) {
+    const container = document.getElementById("channels");
+    container.innerHTML = channels
+      .map(
+        (channel) => `
+      <div class="border p-4 rounded shadow bg-white">
+        <h3 class="text-lg font-bold mb-2">${channel.name}</h3>
+        <p class="mb-2">${channel.description}</p>
+        <a class="text-blue-600 hover:underline" href="${channel.url}" target="_blank">
+          Visit Channel
+        </a>
+        <div class="mt-2">
+          ${channel.tags
+            .map(
+              (tag) =>
+                `<span class="inline-block bg-gray-200 text-gray-700 text-xs px-2 py-1 mr-1 rounded">
+                  ${tag}
+                </span>`
+            )
+            .join("")}
+        </div>
+      </div>
+    `
+      )
+      .join("");
   }
+
+  // Tag filtering logic
+  const tagButtons = document.querySelectorAll(".tag-btn");
+  tagButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Toggle active state for the tag button
+      button.classList.toggle("active");
+      if (button.classList.contains("active")) {
+        button.classList.remove("bg-blue-500");
+        button.classList.add("bg-blue-700");
+      } else {
+        button.classList.remove("bg-blue-700");
+        button.classList.add("bg-blue-500");
+      }
+
+      // Get an array of selected tags from buttons marked active
+      const selectedTags = Array.from(tagButtons)
+        .filter((btn) => btn.classList.contains("active"))
+        .map((btn) => btn.getAttribute("data-tag"));
+
+      // If no tags are selected, display all channels
+      if (selectedTags.length === 0) {
+        displayChannels(allChannels);
+      } else {
+        // For an "OR" filter: show channels that include at least one of the selected tags
+        const filtered = allChannels.filter((channel) =>
+          channel.tags.some((tag) => selectedTags.includes(tag))
+        );
+        displayChannels(filtered);
+      }
+    });
+  });
 });
